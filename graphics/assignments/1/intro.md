@@ -25,7 +25,7 @@
 
    DirectX 是一套由微软发布的用于多媒体和游戏开发的 API，使用 C++ 实现，包含 Direct2D、Direct3D等多部分。目前最新的版本为 DirectX 12。DirectX 在 Windows、Xbox 等平台中广泛用于游戏和三维图形的开发。DirectX 的 SDK 包含了一套可分发的二进制运行时库、文档以及编程使用的头文件。
 
-3. `gl.h` `glu.h` `glew.h` 的作用分别是什么?
+3. **`gl.h` `glu.h` `glew.h` 的作用分别是什么?**
 
    `gl.h`: 包含了 OpenGL-1.1 的函数与符号定义，任何超出 OpenGL-1.1 版本的功能都需要使用其他头文件引入；
 
@@ -33,7 +33,7 @@
 
    `glew.h`：OpenGL Extension Wrangler Library，作用是引入上面提到的超出 OpenGL-1.1版本的扩展功能，包含该头文件后即可使用当前平台和硬件下所支持的所有扩展功能，GLEW 将在程序运行时决定需要载入的的现代 OpenGL API。
 
-4. 使用GLFW和freeglut的目的是什么？
+4. **使用GLFW和freeglut的目的是什么？**
 
    glut 的全称为 OpenGL Utility Toolkit，主要用于处理系统级的 I/O，如定义、控制视窗与监听鼠标、键盘输入等，用于控制包含 OpenGL 上下文的视窗。但 GLUT 已不再受维护，开源的 freeglut 成为其替代品，提供的 API 为 GLUT 的超集。
 

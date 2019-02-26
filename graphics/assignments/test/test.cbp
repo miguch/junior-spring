@@ -5,7 +5,7 @@
 		<Option title="test"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\glm\;"/>
+		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/mig/Desktop/junior-spring/graphics/assignments/test"/>
@@ -75,15 +75,6 @@
 		</Unit>
 		<Unit filename="/Users/mig/Desktop/junior-spring/graphics/assignments/test/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
-		</Unit>
-		<Unit filename="/Users/mig/Desktop/junior-spring/graphics/assignments/test/../../../../../../../usr/local/lib/cmake/glm/GLMConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\glm\"/>
-		</Unit>
-		<Unit filename="/Users/mig/Desktop/junior-spring/graphics/assignments/test/../../../../../../../usr/local/lib/cmake/glm/GLMConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\glm\"/>
-		</Unit>
-		<Unit filename="/Users/mig/Desktop/junior-spring/graphics/assignments/test/../../../../../../../usr/local/lib/cmake/glm/glmTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\glm\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
