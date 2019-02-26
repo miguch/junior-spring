@@ -35,6 +35,7 @@ int main(int argc, char** argv)
     glutInitWindowPosition(100, 100);
     glutCreateWindow("Hello world :D");
     glutDisplayFunc(displayMe);
+    glutMainLoop();
     int a, b;
     cout << glGetString(GL_VERSION) << endl;
     printf("%s\n", glGetString(GL_VERSION));
