@@ -8,7 +8,17 @@
 
 20%: Group Project
 
+### Modeling
 
+- Shape - geometry
+- Appearance
+
+Construct: 
+
+- Manual description
+- Interactive manipulation
+- Procedurally - generating program
+- Scan
 
 
 

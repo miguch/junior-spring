@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="test"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\glm\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/mig/Desktop/junior-spring/graphics/assignments/test"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mig/Desktop/junior-spring/graphics/assignments/test/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mig/Desktop/junior-spring/graphics/assignments/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mig/Desktop/junior-spring/graphics/assignments/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mig/Desktop/junior-spring/graphics/assignments/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/mig/Desktop/junior-spring/graphics/assignments/test"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mig/Desktop/junior-spring/graphics/assignments/test/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mig/Desktop/junior-spring/graphics/assignments/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mig/Desktop/junior-spring/graphics/assignments/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mig/Desktop/junior-spring/graphics/assignments/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/mig/Desktop/junior-spring/graphics/assignments/test"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mig/Desktop/junior-spring/graphics/assignments/test/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mig/Desktop/junior-spring/graphics/assignments/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mig/Desktop/junior-spring/graphics/assignments/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mig/Desktop/junior-spring/graphics/assignments/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test-macos">
+				<Option output="/Users/mig/Desktop/junior-spring/graphics/assignments/test/bin/test-macos" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mig/Desktop/junior-spring/graphics/assignments/test/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/System/Library/Frameworks/GLUT.framework/Headers"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mig/Desktop/junior-spring/graphics/assignments/test/Makefile&quot;  VERBOSE=1 test-macos"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mig/Desktop/junior-spring/graphics/assignments/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mig/Desktop/junior-spring/graphics/assignments/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mig/Desktop/junior-spring/graphics/assignments/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test-macos/fast">
+				<Option output="/Users/mig/Desktop/junior-spring/graphics/assignments/test/bin/test-macos" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mig/Desktop/junior-spring/graphics/assignments/test/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/System/Library/Frameworks/GLUT.framework/Headers"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mig/Desktop/junior-spring/graphics/assignments/test/Makefile&quot;  VERBOSE=1 test-macos/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mig/Desktop/junior-spring/graphics/assignments/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mig/Desktop/junior-spring/graphics/assignments/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mig/Desktop/junior-spring/graphics/assignments/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/mig/Desktop/junior-spring/graphics/assignments/test/src/main.cpp">
+			<Option target="test-macos"/>
+		</Unit>
+		<Unit filename="/Users/mig/Desktop/junior-spring/graphics/assignments/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/mig/Desktop/junior-spring/graphics/assignments/test/../../../../../../../usr/local/lib/cmake/glm/GLMConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\glm\"/>
+		</Unit>
+		<Unit filename="/Users/mig/Desktop/junior-spring/graphics/assignments/test/../../../../../../../usr/local/lib/cmake/glm/GLMConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\glm\"/>
+		</Unit>
+		<Unit filename="/Users/mig/Desktop/junior-spring/graphics/assignments/test/../../../../../../../usr/local/lib/cmake/glm/glmTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\glm\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
