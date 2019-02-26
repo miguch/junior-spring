@@ -5,6 +5,8 @@
 #include <OpenGL/glu.h>
 #include <OpenGL/gl.h>
 #else
+#include <GL/gl.h>
+#include <GLUT/glut.h>
 #include <GL/glew.h>
 #endif
 
