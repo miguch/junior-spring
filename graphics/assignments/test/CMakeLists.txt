@@ -23,19 +23,21 @@ if (WIN32)
     set(os windows)
 endif(WIN32)
 
-add_executable(test-${os} ${SOURCE} ${HEADER})
+set(EXECUTABLE_NAME ${PROJECT_NAME}-${os})
+
+add_executable(${EXECUTABLE_NAME} ${SOURCE} ${HEADER})
 
 if(OpenGL_FOUND)
     link_directories(${OpenGL_LIBRARY_DIRS})
     include_directories(${OpenGL_INCLUDE_DIR})
-    target_link_libraries(${PROJECT_NAME}-${os} ${OPENGL_gl_LIBRARY})
+    target_link_libraries(${EXECUTABLE_NAME} ${OPENGL_gl_LIBRARY})
 endif(OpenGL_FOUND)
 
 
 if(GLUT_FOUND)
     link_directories(${GLUT_LIBRARY_DIR})
     include_directories(${GLUT_INCLUDE_DIR})
-    target_link_libraries(${PROJECT_NAME}-${os} ${GLUT_LIBRARIES})
+    target_link_libraries(${EXECUTABLE_NAME} ${GLUT_LIBRARIES})
 endif(GLUT_FOUND)
 
 

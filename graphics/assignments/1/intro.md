@@ -41,6 +41,7 @@
 
    freeglut 与 GLFW 都建立在 OpenGL 之上，可以实现类似的处理 I/O 的功能，其区别是 GLUT 通过回调工作，而且实现了 event loop，而 GLFW 中则由开发者来决定 event loop 的实现。
 
-5. **选择一个SIGGRAPH 2017/2018上 你最喜欢的专题，介绍该专题是做 什么的，使用了什么CG技术？**
+5. **选择一个SIGGRAPH 2017/2018上 你最喜欢的专题，介绍该专题是做什么的，使用了什么CG技术？**
 
-   
+   [A Multi-Scale Model for Simulating Liquid-Hair Interactions ](http://www.cs.columbia.edu/cg/liquidhair/) 该专题提出了对液体中的毛发进行模拟的一个框架，其方法的基础是对毛发使用 Discrete Elastic Rods 模型，对液体使用粒子元胞（particle-in-cell）模型。在基础上该专题提出了用于处理物体间交互关系的物理和数值模型，建立了用于处理液体在毛发上运动和液体对毛发状态影响的模型。基于毛发间存在的液体的几何关系，专题也建立了一个用于处理相邻毛发由于液体而粘合在一起的情况的模型，并对液体在毛发上滴落的效果进行处理。最终效果可以对湿发抛起、动物甩干毛发、旋转的潮湿的洗车刷以及浸液状态下毛发的粘连现象进行模拟。
+
