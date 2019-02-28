@@ -11,6 +11,7 @@ FILE(GLOB HEADER ${SOURCE_DIR}/*.h ${SOURCE_DIR}/*.hpp)
 
 add_subdirectory(dependencies/GLFW)
 include_directories(dependencies/include)
+include_directories(dependencies/GLFW/include)
 
 if (APPLE)
     set(os macos)

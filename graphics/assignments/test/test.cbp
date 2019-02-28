@@ -85,6 +85,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/mig/Desktop/junior-spring/graphics/assignments/test/dependencies/include"/>
+					<Add directory="/Users/mig/Desktop/junior-spring/graphics/assignments/test/dependencies/GLFW/include"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -f &quot;/Users/mig/Desktop/junior-spring/graphics/assignments/test/Makefile&quot;  VERBOSE=1 test-macos"/>
@@ -101,6 +102,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/mig/Desktop/junior-spring/graphics/assignments/test/dependencies/include"/>
+					<Add directory="/Users/mig/Desktop/junior-spring/graphics/assignments/test/dependencies/GLFW/include"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -f &quot;/Users/mig/Desktop/junior-spring/graphics/assignments/test/Makefile&quot;  VERBOSE=1 test-macos/fast"/>
