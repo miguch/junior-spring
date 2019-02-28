@@ -10,6 +10,9 @@ set(SOURCE_DIR ${CMAKE_BINARY_DIR}/src)
 FILE(GLOB SOURCE ${SOURCE_DIR}/*.cpp ${SOURCE_DIR}/*.c)
 FILE(GLOB HEADER ${SOURCE_DIR}/*.h ${SOURCE_DIR}/*.hpp)
 
+set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
+set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 add_subdirectory(dependencies/GLFW)
 include_directories(dependencies/include)
 include_directories(dependencies/GLFW/include)
@@ -30,7 +33,6 @@ set(EXECUTABLE_NAME ${PROJECT_NAME}-${os})
 
 add_executable(${EXECUTABLE_NAME} ${SOURCE} ${HEADER})
 
-
 FIND_PACKAGE(OpenGL REQUIRED)
 if(OpenGL_FOUND)
     link_directories(${OpenGL_LIBRARY_DIRS})
@@ -45,7 +47,4 @@ endif(OpenGL_FOUND)
 #    target_link_libraries(${EXECUTABLE_NAME} ${GLUT_LIBRARIES})
 #endif(GLUT_FOUND)
 
-set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
-set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
-set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 target_link_libraries(${EXECUTABLE_NAME} glfw)

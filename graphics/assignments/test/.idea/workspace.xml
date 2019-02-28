@@ -14,9 +14,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1f8f327-6fc9-4f52-9b5c-fbd2931244e9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/test-macos" beforeDir="false" afterPath="$PROJECT_DIR$/bin/test-macos" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependencies/GLFW/src/libglfw3.a" beforeDir="false" afterPath="$PROJECT_DIR$/dependencies/GLFW/src/libglfw3.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependencies/GLFW/cmake_uninstall.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/dependencies/GLFW/cmake_uninstall.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependencies/GLFW/src/glfw3.pc" beforeDir="false" afterPath="$PROJECT_DIR$/dependencies/GLFW/src/glfw3.pc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependencies/GLFW/src/glfw3ConfigVersion.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/dependencies/GLFW/src/glfw3ConfigVersion.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependencies/GLFW/src/glfw_config.h" beforeDir="false" afterPath="$PROJECT_DIR$/dependencies/GLFW/src/glfw_config.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -34,8 +37,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
+            <state relative-caret-position="83">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dependencies/GLFW/cmake_install.cmake">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-808">
+              <caret line="14" column="42" lean-forward="true" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -43,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dependencies/GLFW/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="192">
+              <caret line="409" column="29" lean-forward="true" selection-start-line="409" selection-start-column="29" selection-end-line="409" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -85,6 +97,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>threads</find>
+      <find>EXE</find>
+      <find>EXECUTABLE</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
@@ -117,30 +136,6 @@
             <path>
               <item name="test" type="b2602c69:ProjectViewProjectNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="dependencies" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="dependencies" type="462c0819:PsiDirectoryNode" />
-              <item name="GLFW" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="dependencies" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="dependencies" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
-              <item name="glad" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="test" type="b2602c69:ProjectViewProjectNode" />
@@ -205,12 +200,12 @@
       <option name="presentableId" value="Default" />
       <updated>1551150299155</updated>
       <workItem from="1551150300410" duration="7563000" />
-      <workItem from="1551184712358" duration="4185000" />
+      <workItem from="1551184712358" duration="4801000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11748000" />
+    <option name="totallyTimeSpent" value="12364000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="44" y="34" width="1599" height="893" extended-state="0" />
@@ -353,17 +348,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dependencies/GLFW/cmake_uninstall.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="18" column="84" selection-start-line="18" selection-start-column="84" selection-end-line="18" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dependencies/GLFW/cmake_install.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-808">
+          <caret line="14" column="42" lean-forward="true" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dependencies/GLFW/src/win32_joystick.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6340" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dependencies/GLFW/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="192">
+          <caret line="409" column="29" lean-forward="true" selection-start-line="409" selection-start-column="29" selection-end-line="409" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
+        <state relative-caret-position="83">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
