@@ -1,16 +1,11 @@
 #if defined(__APPLE__)
 #define GL_SILENCE_DEPRECATION
-#include <GL/glew.h>
-#include <GLUT/glut.h>
-#include <OpenGL/glu.h>
-#include <OpenGL/gl.h>
 #else
 #include "msvc_gl.h"
-#include <GL/glew.h>
-#include <GL/glut.h>
-#include <GL/gl.h>
 #endif
 
+#include <glad/glad.h>
+#include <GLFW/glfw3.h>
 #include <iostream>
 
 using namespace std;
@@ -30,16 +25,20 @@ void displayMe(void)
 
 int main(int argc, char** argv)
 {
-    glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_SINGLE);
-    glutInitWindowSize(300, 300);
-    glutInitWindowPosition(100, 100);
-    glutCreateWindow("Hello world :D");
-    glutDisplayFunc(displayMe);
-    glutMainLoop();
-    int a, b;
-    cout << glGetString(GL_VERSION) << endl;
-    printf("%s\n", glGetString(GL_VERSION));
+//    glutInit(&argc, argv);
+//    glutInitDisplayMode(GLUT_SINGLE);
+//    glutInitWindowSize(300, 300);
+//    glutInitWindowPosition(100, 100);
+//    glutCreateWindow("Hello world :D");
+//    glutDisplayFunc(displayMe);
+//    glutMainLoop();
+//    cout << glGetString(GL_VERSION) << endl;
+//    printf("%s\n", glGetString(GL_VERSION));
+
+    glfwInit();
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     return 0;
 }

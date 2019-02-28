@@ -1,3 +1,3 @@
-#ifdef _MSC_VER 
+#ifdef _MSC_VER
 #define NDEBUG
 #endif
