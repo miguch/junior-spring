@@ -18,13 +18,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f1f8f327-6fc9-4f52-9b5c-fbd2931244e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Hello-macos" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/imgui.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependencies/GLFW/cmake_uninstall.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/dependencies/GLFW/cmake_uninstall.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependencies/GLFW/src/glfw3.pc" beforeDir="false" afterPath="$PROJECT_DIR$/dependencies/GLFW/src/glfw3.pc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependencies/GLFW/src/glfw3ConfigVersion.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/dependencies/GLFW/src/glfw3ConfigVersion.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependencies/GLFW/src/glfw_config.h" beforeDir="false" afterPath="$PROJECT_DIR$/dependencies/GLFW/src/glfw_config.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../traingle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../traingle/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -43,11 +36,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+            <state relative-caret-position="345">
+              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="16" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -68,15 +61,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-53">
-              <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+            <state relative-caret-position="225">
+              <caret line="57" column="45" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
               <folding>
                 <element signature="e#60#94#0" expanded="true" />
-                <element signature="e#106#128#0" expanded="true" />
-                <element signature="e#6266#6601#0" expanded="true" />
+                <element signature="e#112#131#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -134,8 +126,8 @@
         <option value="$PROJECT_DIR$/dependencies/glad/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/dependencies/imgui/src/imgui_impl_opengl3.cpp" />
         <option value="$PROJECT_DIR$/dependencies/imgui/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/src/main.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/src/main.cpp" />
       </list>
     </option>
   </component>
@@ -185,11 +177,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/dependencies/glad/src" />
       <recent name="$PROJECT_DIR$/dependencies/glad/include" />
       <recent name="$PROJECT_DIR$/dependencies/imgui/include/imgui" />
       <recent name="$PROJECT_DIR$/dependencies/imgui/header/imgui" />
-      <recent name="$PROJECT_DIR$/dependencies/imgui/header" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -259,12 +251,12 @@
       <workItem from="1551425983584" duration="3672000" />
       <workItem from="1551534084271" duration="2063000" />
       <workItem from="1551604272886" duration="35000" />
-      <workItem from="1551795460652" duration="7704000" />
+      <workItem from="1551795460652" duration="8274000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33796000" />
+    <option name="totallyTimeSpent" value="34366000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -280,7 +272,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2851638" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2851638" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.3287841" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32958803" />
@@ -289,7 +281,7 @@
       <window_info anchor="bottom" id="Version Control" order="4" weight="0.32958803" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.3287841" />
-      <window_info anchor="bottom" id="Run" order="7" visible="true" weight="0.32754344" />
+      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.32754344" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.39826304" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="CMake" order="10" weight="0.3287841" />
@@ -310,7 +302,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/main.cpp</url>
-          <line>32</line>
+          <line>33</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
@@ -652,25 +644,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-53">
-          <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
-          <folding>
-            <element signature="e#60#94#0" expanded="true" />
-            <element signature="e#106#128#0" expanded="true" />
-            <element signature="e#6266#6601#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/imgui.ini">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        <state relative-caret-position="345">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="16" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/chrono">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="594" column="42" selection-start-line="594" selection-start-column="42" selection-end-line="594" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="57" column="45" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
+          <folding>
+            <element signature="e#60#94#0" expanded="true" />
+            <element signature="e#112#131#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
