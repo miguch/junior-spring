@@ -15,17 +15,22 @@ class ShaderException : public std::exception {
 private:
     std::string msg;
 public:
-    explicit ShaderException(const char* msg);
-    const char * what() const noexcept override;
+    explicit ShaderException(const char *msg);
+
+    const char *what() const noexcept override;
 };
 
 class Shader {
 private:
     GLuint programId;
-    static GLuint createShader(const char * name, const char* code, GLenum ShaderType);
+
+    static GLuint createShader(const char *name, const char *code, GLenum ShaderType);
+
 public:
-    Shader(const char* vertexPath, const char* fragPath);
+    Shader(const char *vertexPath, const char *fragPath);
+
     void use();
+
     GLuint getProgram();
 
 };

@@ -48,7 +48,7 @@ Shader::Shader(const char *vertexPath, const char *fragPath) {
 }
 
 
-GLuint Shader::createShader(const char * name, const char *code, GLenum shaderType) {
+GLuint Shader::createShader(const char *name, const char *code, GLenum shaderType) {
     GLint success;
     GLuint shader = glCreateShader(shaderType);
     glShaderSource(shader, 1, &code, nullptr);
@@ -74,7 +74,7 @@ GLuint Shader::getProgram() {
     return programId;
 }
 
-ShaderException::ShaderException(const char *msg)  : msg(msg) {}
+ShaderException::ShaderException(const char *msg) : msg(msg) {}
 
 const char *ShaderException::what() const noexcept {
     return msg.c_str();

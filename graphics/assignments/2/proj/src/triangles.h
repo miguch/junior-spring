@@ -23,10 +23,12 @@ public:
         LINES
     };
 
-    explicit triangles(GLFWwindow* window);
+    explicit triangles(GLFWwindow *window);
+
     void loop();
+
 private:
-    GLFWwindow* window;
+    GLFWwindow *window;
     GLuint RGB_VAO, RGB_VBO, simple_VAO, simple_VBO, custom_VBO, custom_VAO, element_VBO, element_VAO, tri_EBO, line_EBO;
     Mode mode;
     std::unique_ptr<Shader> shader, uniformShader;

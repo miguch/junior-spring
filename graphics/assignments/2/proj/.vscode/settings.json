@@ -1,4 +1,12 @@
 {
     "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools",
-    "cmake.configureOnOpen": true
+    "cmake.configureOnOpen": true,
+    "files.associations": {
+        "*.m": "matlab",
+        "memory": "cpp",
+        "tuple": "cpp",
+        "__tuple": "cpp",
+        "__functional_base": "cpp",
+        "__config": "cpp"
+    }
 }
