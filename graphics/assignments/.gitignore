@@ -6,6 +6,6 @@ Makefile
 *.cbp
 libglfw3.a
 LearnOpenGL
-imgui
+imgui/*
 *.a
 
