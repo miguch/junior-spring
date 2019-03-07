@@ -331,12 +331,12 @@
       <workItem from="1551795460652" duration="8671000" />
       <workItem from="1551836978253" duration="11501000" />
       <workItem from="1551856257221" duration="3181000" />
-      <workItem from="1551869983155" duration="28977000" />
+      <workItem from="1551869983155" duration="29149000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78422000" />
+    <option name="totallyTimeSpent" value="78594000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -361,7 +361,7 @@
       <window_info anchor="bottom" id="Version Control" order="4" weight="0.3287841" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.3287841" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.32754344" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.32754344" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.39826304" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="CMake" order="10" weight="0.3287841" />
