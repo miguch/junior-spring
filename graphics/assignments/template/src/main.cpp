@@ -1,3 +1,5 @@
+#include <memory>
+
 #if defined(__APPLE__)
 #define GL_SILENCE_DEPRECATION
 #else
@@ -7,12 +9,18 @@
 #endif
 
 #include <iostream>
+#include <memory>
+#include <cmath>
+#include <ctime>
 #include <thread>
+#include <exception>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <imgui/imgui.h>
 #include <imgui/imgui_impl_glfw.h>
 #include <imgui/imgui_impl_opengl3.h>
+
+#include "shader.h"
 
 using namespace std;
 
@@ -62,9 +70,6 @@ void gui(GLFWwindow* window) {
         // - When io.WantCaptureKeyboard is true, do not dispatch keyboard input data to your main application.
         // Generally you may always pass all inputs to dear imgui, and hide them from your application based on those two flags.
         glfwPollEvents();
-        clear_color.x += 0.0001;
-        clear_color.y += 0.0002;
-        clear_color.z += 0.0005;
 
         // Start the Dear ImGui frame
         ImGui_ImplOpenGL3_NewFrame();
@@ -79,6 +84,9 @@ void gui(GLFWwindow* window) {
         {
             static float f = 0.0f;
             static int counter = 0;
+            clear_color.x += 0.1 * f;
+            clear_color.y += 0.2 * f;
+            clear_color.z += 0.5 * f;
 
             ImGui::Begin("Hello, world!");                          // Create a window called "Hello, world!" and append into it.
 
@@ -130,6 +138,60 @@ void gui(GLFWwindow* window) {
 
 }
 
+void triangle(GLFWwindow* window) {
+    float vertices[] = {
+            1.f, -1.f, 0.0f,  1.0f, 0.0f, 0.0f,
+            -1.f, -1.f, 0.0f,  0.0f, 1.0f, 0.0f,
+            0.0f,  1.f, 0.0f,  0.0f, 0.0f, 1.0f,
+            1.0f,  1.f, 0.0f,  0.0f, 1.0f, 1.0f,
+            -1.0f, 1.f, 0.0f, 1.0f, 1.f, 0.f,
+            -0.5f, 0.5f, 0.0f, 1.0f, 0.f, 1.f
+    };
+
+    IMGUI_CHECKVERSION();
+    ImGui::CreateContext();
+    ImGuiIO& io = ImGui::GetIO();
+
+    GLuint VBO;
+    glGenBuffers(1, &VBO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+    unique_ptr<Shader> shader;
+    try {
+        shader = std::make_unique<Shader>("shaders/vert.glsl", "shaders/frag.glsl");
+    } catch (exception &err) {
+        cerr << err.what() << endl;
+        exit(1);
+    }
+
+    unsigned int VAO;
+    glGenVertexArrays(1, &VAO);
+    glBindVertexArray(VAO);
+
+    //Position
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+    //Color
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3* sizeof(float)));
+    glEnableVertexAttribArray(1);
+
+    while (!glfwWindowShouldClose(window)) {
+        glClearColor(0.f, 0.f, 0.f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
+        shader->use();
+
+        this_thread::sleep_for(chrono::milliseconds(46));
+
+        glBindVertexArray(VAO);
+        glDrawArrays(GL_TRIANGLES, 0, 3);
+        glfwMakeContextCurrent(window);
+        glfwSwapBuffers(window);
+        glfwPollEvents();
+    }
+
+}
+
 int main() {
     glfwInit();
 
@@ -139,7 +201,7 @@ int main() {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);  // 3.2+ only
 #if defined(__APPLE__)
-    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);            // Required on Mac
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 #endif
 
     // glfw window creation
@@ -157,10 +219,10 @@ int main() {
         return -1;
     }
 
-    gui(window);
+    triangle(window);
 
-    // clearing all previously allocated GLFW resources.
-    // ------------------------------------------------------------------
+
+    // clear GLFW resources
     glfwTerminate();
     return 0;
 }

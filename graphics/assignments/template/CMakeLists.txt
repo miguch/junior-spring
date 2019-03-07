@@ -35,11 +35,11 @@ set(EXECUTABLE_NAME ${PROJECT_NAME}-${os})
 
 add_executable(${EXECUTABLE_NAME} ${ALL_SOURCES})
 
-# copy resources and shader after build
-add_custom_command(TARGET ${EXECUTABLE_NAME} POST_BUILD
-                   COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_LIST_DIR}/resources ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/resources)
-add_custom_command(TARGET ${EXECUTABLE_NAME} POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy_directory src/shader ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/shader)
+# copy resources and shaders after build
+add_custom_target(copy-resources ALL
+        COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_LIST_DIR}/resources ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/resources
+        COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_LIST_DIR}/src/shaders ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/shaders)
+
 
 FIND_PACKAGE(OpenGL REQUIRED)
 if(OpenGL_FOUND)
@@ -51,6 +51,7 @@ endif(OpenGL_FOUND)
 target_link_libraries(${EXECUTABLE_NAME} glfw)
 target_link_libraries(${EXECUTABLE_NAME} imgui)
 target_link_libraries(${EXECUTABLE_NAME} glad)
+add_dependencies(${EXECUTABLE_NAME} copy-resources)
 
 #FIND_PACKAGE(GLUT REQUIRED)
 #if(GLUT_FOUND)

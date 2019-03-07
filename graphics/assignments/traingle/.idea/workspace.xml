@@ -16,6 +16,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f1f8f327-6fc9-4f52-9b5c-fbd2931244e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../template/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../template/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../template/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../template/bin/Hello-macos" beforeDir="false" afterPath="$PROJECT_DIR$/../template/bin/Hello-macos" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../template/bin/imgui.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../template/bin/imgui.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../template/dependencies/GLFW/examples/heightmap.c" beforeDir="false" afterPath="$PROJECT_DIR$/../template/dependencies/GLFW/examples/heightmap.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../template/dependencies/imgui/src/imgui.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../template/dependencies/imgui/src/imgui.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../template/dependencies/imgui/src/imgui_impl_opengl3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../template/dependencies/imgui/src/imgui_impl_opengl3.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../template/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../template/src/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
