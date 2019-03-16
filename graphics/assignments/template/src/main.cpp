@@ -22,6 +22,8 @@
 
 #include "shader.h"
 
+#include "std_image.h"
+
 using namespace std;
 
 const unsigned int SCR_WIDTH = 800;
@@ -218,6 +220,7 @@ int main() {
         std::cout << "Failed to initialize GLAD" << std::endl;
         return -1;
     }
+
 
     triangle(window);
 
