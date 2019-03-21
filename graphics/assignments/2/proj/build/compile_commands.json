@@ -1,0 +1,145 @@
+[
+{
+  "directory": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/build",
+  "command": "/usr/bin/clang++   -I../dependencies/GLFW/include -I../dependencies/imgui/include -I../dependencies/glad/include  -g   -std=gnu++14 -o CMakeFiles/triangle-gui-macos.dir/src/main.cpp.o -c /Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/src/main.cpp",
+  "file": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/src/main.cpp"
+},
+
+{
+  "directory": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/build",
+  "command": "/usr/bin/clang++   -I../dependencies/GLFW/include -I../dependencies/imgui/include -I../dependencies/glad/include  -g   -std=gnu++14 -o CMakeFiles/triangle-gui-macos.dir/src/shader.cpp.o -c /Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/src/shader.cpp",
+  "file": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/src/shader.cpp"
+},
+
+{
+  "directory": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/build",
+  "command": "/usr/bin/clang++   -I../dependencies/GLFW/include -I../dependencies/imgui/include -I../dependencies/glad/include  -g   -std=gnu++14 -o CMakeFiles/triangle-gui-macos.dir/src/triangles.cpp.o -c /Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/src/triangles.cpp",
+  "file": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/src/triangles.cpp"
+},
+
+{
+  "directory": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/build",
+  "command": "/usr/bin/clang++  -DIMGUI_IMPL_OPENGL_LOADER_GLAD -I../dependencies/imgui/include/imgui -I../dependencies/glad/include -I../dependencies/GLFW/include  -g   -std=gnu++14 -o dependencies/imgui/CMakeFiles/imgui.dir/src/imgui.cpp.o -c /Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/imgui/src/imgui.cpp",
+  "file": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/imgui/src/imgui.cpp"
+},
+
+{
+  "directory": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/build",
+  "command": "/usr/bin/clang++  -DIMGUI_IMPL_OPENGL_LOADER_GLAD -I../dependencies/imgui/include/imgui -I../dependencies/glad/include -I../dependencies/GLFW/include  -g   -std=gnu++14 -o dependencies/imgui/CMakeFiles/imgui.dir/src/imgui_demo.cpp.o -c /Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/imgui/src/imgui_demo.cpp",
+  "file": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/imgui/src/imgui_demo.cpp"
+},
+
+{
+  "directory": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/build",
+  "command": "/usr/bin/clang++  -DIMGUI_IMPL_OPENGL_LOADER_GLAD -I../dependencies/imgui/include/imgui -I../dependencies/glad/include -I../dependencies/GLFW/include  -g   -std=gnu++14 -o dependencies/imgui/CMakeFiles/imgui.dir/src/imgui_draw.cpp.o -c /Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/imgui/src/imgui_draw.cpp",
+  "file": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/imgui/src/imgui_draw.cpp"
+},
+
+{
+  "directory": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/build",
+  "command": "/usr/bin/clang++  -DIMGUI_IMPL_OPENGL_LOADER_GLAD -I../dependencies/imgui/include/imgui -I../dependencies/glad/include -I../dependencies/GLFW/include  -g   -std=gnu++14 -o dependencies/imgui/CMakeFiles/imgui.dir/src/imgui_impl_glfw.cpp.o -c /Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/imgui/src/imgui_impl_glfw.cpp",
+  "file": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/imgui/src/imgui_impl_glfw.cpp"
+},
+
+{
+  "directory": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/build",
+  "command": "/usr/bin/clang++  -DIMGUI_IMPL_OPENGL_LOADER_GLAD -I../dependencies/imgui/include/imgui -I../dependencies/glad/include -I../dependencies/GLFW/include  -g   -std=gnu++14 -o dependencies/imgui/CMakeFiles/imgui.dir/src/imgui_impl_opengl3.cpp.o -c /Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/imgui/src/imgui_impl_opengl3.cpp",
+  "file": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/imgui/src/imgui_impl_opengl3.cpp"
+},
+
+{
+  "directory": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/build",
+  "command": "/usr/bin/clang++  -DIMGUI_IMPL_OPENGL_LOADER_GLAD -I../dependencies/imgui/include/imgui -I../dependencies/glad/include -I../dependencies/GLFW/include  -g   -std=gnu++14 -o dependencies/imgui/CMakeFiles/imgui.dir/src/imgui_stdlib.cpp.o -c /Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/imgui/src/imgui_stdlib.cpp",
+  "file": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/imgui/src/imgui_stdlib.cpp"
+},
+
+{
+  "directory": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/build",
+  "command": "/usr/bin/clang++  -DIMGUI_IMPL_OPENGL_LOADER_GLAD -I../dependencies/imgui/include/imgui -I../dependencies/glad/include -I../dependencies/GLFW/include  -g   -std=gnu++14 -o dependencies/imgui/CMakeFiles/imgui.dir/src/imgui_widgets.cpp.o -c /Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/imgui/src/imgui_widgets.cpp",
+  "file": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/imgui/src/imgui_widgets.cpp"
+},
+
+{
+  "directory": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/build",
+  "command": "/usr/bin/clang  -I../dependencies/glad/include  -g   -o dependencies/glad/CMakeFiles/glad.dir/src/glad.c.o   -c /Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/glad/src/glad.c",
+  "file": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/glad/src/glad.c"
+},
+
+{
+  "directory": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I../dependencies/GLFW/include -I../dependencies/GLFW/src -Idependencies/GLFW/src  -g -fPIC   -o dependencies/GLFW/src/CMakeFiles/glfw.dir/context.c.o   -c /Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/GLFW/src/context.c",
+  "file": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/GLFW/src/context.c"
+},
+
+{
+  "directory": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I../dependencies/GLFW/include -I../dependencies/GLFW/src -Idependencies/GLFW/src  -g -fPIC   -o dependencies/GLFW/src/CMakeFiles/glfw.dir/init.c.o   -c /Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/GLFW/src/init.c",
+  "file": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/GLFW/src/init.c"
+},
+
+{
+  "directory": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I../dependencies/GLFW/include -I../dependencies/GLFW/src -Idependencies/GLFW/src  -g -fPIC   -o dependencies/GLFW/src/CMakeFiles/glfw.dir/input.c.o   -c /Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/GLFW/src/input.c",
+  "file": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/GLFW/src/input.c"
+},
+
+{
+  "directory": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I../dependencies/GLFW/include -I../dependencies/GLFW/src -Idependencies/GLFW/src  -g -fPIC   -o dependencies/GLFW/src/CMakeFiles/glfw.dir/monitor.c.o   -c /Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/GLFW/src/monitor.c",
+  "file": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/GLFW/src/monitor.c"
+},
+
+{
+  "directory": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I../dependencies/GLFW/include -I../dependencies/GLFW/src -Idependencies/GLFW/src  -g -fPIC   -o dependencies/GLFW/src/CMakeFiles/glfw.dir/vulkan.c.o   -c /Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/GLFW/src/vulkan.c",
+  "file": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/GLFW/src/vulkan.c"
+},
+
+{
+  "directory": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I../dependencies/GLFW/include -I../dependencies/GLFW/src -Idependencies/GLFW/src  -g -fPIC   -o dependencies/GLFW/src/CMakeFiles/glfw.dir/window.c.o   -c /Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/GLFW/src/window.c",
+  "file": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/GLFW/src/window.c"
+},
+
+{
+  "directory": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I../dependencies/GLFW/include -I../dependencies/GLFW/src -Idependencies/GLFW/src  -g -fPIC   -o dependencies/GLFW/src/CMakeFiles/glfw.dir/cocoa_init.m.o   -c /Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/GLFW/src/cocoa_init.m",
+  "file": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/GLFW/src/cocoa_init.m"
+},
+
+{
+  "directory": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I../dependencies/GLFW/include -I../dependencies/GLFW/src -Idependencies/GLFW/src  -g -fPIC   -o dependencies/GLFW/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o   -c /Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/GLFW/src/cocoa_joystick.m",
+  "file": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/GLFW/src/cocoa_joystick.m"
+},
+
+{
+  "directory": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I../dependencies/GLFW/include -I../dependencies/GLFW/src -Idependencies/GLFW/src  -g -fPIC   -o dependencies/GLFW/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o   -c /Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/GLFW/src/cocoa_monitor.m",
+  "file": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/GLFW/src/cocoa_monitor.m"
+},
+
+{
+  "directory": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I../dependencies/GLFW/include -I../dependencies/GLFW/src -Idependencies/GLFW/src  -g -fPIC   -o dependencies/GLFW/src/CMakeFiles/glfw.dir/cocoa_window.m.o   -c /Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/GLFW/src/cocoa_window.m",
+  "file": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/GLFW/src/cocoa_window.m"
+},
+
+{
+  "directory": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I../dependencies/GLFW/include -I../dependencies/GLFW/src -Idependencies/GLFW/src  -g -fPIC   -o dependencies/GLFW/src/CMakeFiles/glfw.dir/cocoa_time.c.o   -c /Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/GLFW/src/cocoa_time.c",
+  "file": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/GLFW/src/cocoa_time.c"
+},
+
+{
+  "directory": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I../dependencies/GLFW/include -I../dependencies/GLFW/src -Idependencies/GLFW/src  -g -fPIC   -o dependencies/GLFW/src/CMakeFiles/glfw.dir/posix_tls.c.o   -c /Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/GLFW/src/posix_tls.c",
+  "file": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/GLFW/src/posix_tls.c"
+},
+
+{
+  "directory": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/build",
+  "command": "/usr/bin/clang -D_GLFW_USE_CONFIG_H -I../dependencies/GLFW/include -I../dependencies/GLFW/src -Idependencies/GLFW/src  -g -fPIC   -o dependencies/GLFW/src/CMakeFiles/glfw.dir/nsgl_context.m.o   -c /Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/GLFW/src/nsgl_context.m",
+  "file": "/Users/mig/Desktop/junior-spring/graphics/assignments/2/proj/dependencies/GLFW/src/nsgl_context.m"
+}
+]

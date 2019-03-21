@@ -20,8 +20,11 @@ include_directories(dependencies/GLFW/include)
 FILE(GLOB DEPENDENCIES_SOURCE dependencies/src/*.c dependencies/src/*.cpp)
 FILE(GLOB ALL_SOURCES ${SOURCE} ${HEADER} ${DEPENDENCIES_SOURCE})
 
+add_compile_definitions(STB_IMAGE_IMPLEMENTATION)
+
 if (APPLE)
     set(os macos)
+    add_compile_definitions(GL_SILENCE_DEPRECATION)
 endif(APPLE)
 
 if (UNIX AND NOT APPLE)
@@ -30,6 +33,9 @@ endif(UNIX AND NOT APPLE)
 
 if (WIN32)
     set(os windows)
+    if (MSVC)
+        add_compile_definitions(NDEBUG)
+    endif(MSVC)
 endif(WIN32)
 
 set(EXECUTABLE_NAME ${PROJECT_NAME}-${os})

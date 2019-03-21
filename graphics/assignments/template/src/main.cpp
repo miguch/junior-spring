@@ -1,13 +1,3 @@
-#include <memory>
-
-#if defined(__APPLE__)
-#define GL_SILENCE_DEPRECATION
-#else
-#if defined(_MSC_VER)
-#define NDEBUG
-#endif
-#endif
-
 #include <iostream>
 #include <memory>
 #include <cmath>
@@ -23,13 +13,39 @@
 
 #include "shader.h"
 
-#include "std_image.h"
+#include "stb_image.h"
 
 using namespace std;
 
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 const char* glsl_version;
+
+pair<GLuint, GLuint> genVertex(int size, float *data,
+                               const function<void()> &vertexAttribCallback) {
+    GLuint VBO, VAO;
+    glGenVertexArrays(1, &VAO);
+    glBindVertexArray(VAO);
+    glGenBuffers(1, &VBO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    if (size != 0 && data != nullptr) {
+        glBufferData(GL_ARRAY_BUFFER, size, data, GL_STATIC_DRAW);
+    }
+    vertexAttribCallback();
+    // Unbind
+    glBindVertexArray(0);
+    return make_pair(VAO, VBO);
+}
+
+GLuint genEBO(GLuint VAO, int size, unsigned int *data) {
+    GLuint EBO;
+    glBindVertexArray(VAO);
+    glGenBuffers(1, &EBO);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, size, data, GL_STATIC_DRAW);
+    glBindVertexArray(0);
+    return EBO;
+}
 
 void gui(GLFWwindow* window) {
     IMGUI_CHECKVERSION();
