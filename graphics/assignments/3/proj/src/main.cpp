@@ -27,7 +27,6 @@ int main() {
     // glfw window creation
     GLFWwindow *window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "Hello", NULL, NULL);
     glfwSetFramebufferSizeCallback(window, [](GLFWwindow* window, int w, int h) {
-        printf("%d %d\n", w, h);
         glViewport(0, 0, w, h);
     });
     if (window == NULL) {
