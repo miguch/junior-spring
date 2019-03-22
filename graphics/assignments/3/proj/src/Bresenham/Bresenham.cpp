@@ -6,7 +6,7 @@
 #include <iostream>
 #include <glad/glad.h>
 #include <cmath>
-
+#include <functional>
 
 using namespace std;
 
