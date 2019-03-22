@@ -62,7 +62,7 @@ void MainLoop::loop(GLFWwindow *window) {
 
     while (!glfwWindowShouldClose(window)) {
         auto start = clock();
-        glClearColor(0.2f, 0.2f, 0.2f, 1.0f);
+        glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
         ImGui_ImplOpenGL3_NewFrame();
@@ -89,11 +89,11 @@ void MainLoop::loop(GLFWwindow *window) {
                 case TRIANGLE_OUTLINE:
                     ImGui::Text("Vertices Position:");
                     ImGui::Text("a: ");
-                    updateVertices = ImGui::InputFloat2("##a", &triangle_vertices[0]) || updateVertices;
+                    updateVertices = ImGui::SliderFloat2("##a", &triangle_vertices[0], -1, 1) || updateVertices;
                     ImGui::Text("b: ");
-                    updateVertices = ImGui::InputFloat2("##b", &triangle_vertices[2]) || updateVertices;
+                    updateVertices = ImGui::SliderFloat2("##b", &triangle_vertices[2], -1, 1) || updateVertices;
                     ImGui::Text("c: ");
-                    updateVertices = ImGui::InputFloat2("##c", &triangle_vertices[4]) || updateVertices;
+                    updateVertices = ImGui::SliderFloat2("##c", &triangle_vertices[4], -1, 1) || updateVertices;
                     if (updateVertices) {
                         dynamic_cast<BresenhamLine *>(drawer.get())->setVertices(triangle_vertices);
                     }
@@ -104,11 +104,11 @@ void MainLoop::loop(GLFWwindow *window) {
                     break;
                 case CIRCLE:
                     ImGui::Text("Center Position:");
-                    if (ImGui::InputFloat2("##center", circle_center.data())) {
+                    if (ImGui::SliderFloat2("##center", &circle_center[0], -1, 1)) {
                         dynamic_cast<BresenhamCircle *>(drawer.get())->setCenter(circle_center[0], circle_center[1]);
                     }
                     ImGui::Text("Radius:");
-                    if (ImGui::SliderFloat("##radius", &circle_radius, 0, 0.5)) {
+                    if (ImGui::SliderFloat("##radius", &circle_radius, 0, 1)) {
                         dynamic_cast<BresenhamCircle *>(drawer.get())->setRadius(circle_radius);
                     }
                     ImGui::Text("Color: ");
@@ -119,11 +119,11 @@ void MainLoop::loop(GLFWwindow *window) {
                 case TRIANGLE_FILLED:
                     ImGui::Text("Vertices Position:");
                     ImGui::Text("a: ");
-                    updateVertices = ImGui::InputFloat2("##filled-a", &filled_triangle_vertices[0]) || updateVertices;
+                    updateVertices = ImGui::SliderFloat2("##filled-a", &filled_triangle_vertices[0], -1, 1) || updateVertices;
                     ImGui::Text("b: ");
-                    updateVertices = ImGui::InputFloat2("##filled-b", &filled_triangle_vertices[2]) || updateVertices;
+                    updateVertices = ImGui::SliderFloat2("##filled-b", &filled_triangle_vertices[2], -1, 1) || updateVertices;
                     ImGui::Text("c: ");
-                    updateVertices = ImGui::InputFloat2("##filled-c", &filled_triangle_vertices[4]) || updateVertices;
+                    updateVertices = ImGui::SliderFloat2("##filled-c", &filled_triangle_vertices[4], -1, 1) || updateVertices;
                     if (updateVertices) {
                         dynamic_cast<RasterizedTriangle *>(drawer.get())->setVertices(filled_triangle_vertices);
                     }

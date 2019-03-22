@@ -12,14 +12,14 @@ vector<BresenhamCircle::Point<GLint>> getCirclePoints(GLint cx, GLint cy, GLint 
     vector<BresenhamCircle::Point<GLint>> result;
     //Draw 8 parts of the circle
     auto putPoints = [&](GLint dx, GLint dy) {
-        result.push_back({cx + dx, cx + dy});
-        result.push_back({cx + dx, cx - dy});
-        result.push_back({cx - dx, cx + dy});
-        result.push_back({cx - dx, cx - dy});
-        result.push_back({cx + dy, cx + dx});
-        result.push_back({cx + dy, cx - dx});
-        result.push_back({cx - dy, cx + dx});
-        result.push_back({cx - dy, cx - dx});
+        result.push_back({cx + dx, cy + dy});
+        result.push_back({cx + dx, cy - dy});
+        result.push_back({cx - dx, cy + dy});
+        result.push_back({cx - dx, cy - dy});
+        result.push_back({cx + dy, cy + dx});
+        result.push_back({cx + dy, cy - dx});
+        result.push_back({cx - dy, cy + dx});
+        result.push_back({cx - dy, cy - dx});
     };
     for (int x = 0, y = radius; x <= y; x++) {
         if (d >= 0) {
@@ -38,8 +38,8 @@ void BresenhamCircle::draw() {
     Bresenham::useShader();
     if (updateWindowSize() || updateParameters()) {
         //To pixel coordinate
-        int cx = center.x * windowWidth, cy = center.y * windowHeight;
-        int pr = radius * min(windowHeight, windowWidth);
+        int cx = center.x * windowWidth / 2, cy = center.y * windowHeight / 2;
+        int pr = radius * min(windowHeight, windowWidth) / 2;
         auto points = getCirclePoints(cx, cy, pr);
         pointsData.clear();
         for (const auto &point : points) {

@@ -18,7 +18,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="785d4132-15ca-40d2-915b-926a732794b2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Bresenham/BresenhamCircle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bresenham/BresenhamCircle.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainLoop.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainLoop.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../template/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../template/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../mining/kaggle/assignment1/Project 1(New).ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../mining/kaggle/assignment1/Project 1(New).ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../testing/Lecture-note/Lec.4-Chap.1.4 Software Quality Criteria.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../testing/Lecture-note/Lec.4-Chap.1.4 Software Quality Criteria.pdf" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -42,11 +45,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Bresenham/RasterizedTriangle.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+            <state relative-caret-position="274">
+              <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+              <folding>
+                <element signature="e#48#79#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -67,7 +73,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Bresenham/RasterizedTriangle.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
+            <state relative-caret-position="129">
               <caret line="16" column="66" lean-forward="true" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
               <folding>
                 <element signature="e#125#147#0" expanded="true" />
@@ -85,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="20" column="50" lean-forward="true" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
+            <state relative-caret-position="165">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -128,24 +134,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MainLoop.cpp">
+        <entry file="file://$PROJECT_DIR$/src/Bresenham/BresenhamCircle.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2384">
-              <caret line="130" column="75" selection-start-line="130" selection-start-column="75" selection-end-line="130" selection-end-column="75" />
-              <folding>
-                <element signature="e#48#69#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="41" column="60" selection-start-line="41" selection-start-column="60" selection-end-line="41" selection-end-column="60" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MainLoop.h">
+        <entry file="file://$PROJECT_DIR$/src/MainLoop.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+            <state relative-caret-position="24">
+              <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
               <folding>
-                <element signature="e#105#129#0" expanded="true" />
+                <element signature="e#48#69#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -177,12 +180,12 @@
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/Bresenham/Bresenham.h" />
         <option value="$PROJECT_DIR$/src/Bresenham/BresenhamLine.cpp" />
-        <option value="$PROJECT_DIR$/src/Bresenham/BresenhamCircle.cpp" />
         <option value="$PROJECT_DIR$/src/Bresenham/BresenhamLine.h" />
         <option value="$PROJECT_DIR$/src/Bresenham/RasterizedTriangle.h" />
-        <option value="$PROJECT_DIR$/src/MainLoop.cpp" />
-        <option value="$PROJECT_DIR$/src/main.cpp" />
         <option value="$PROJECT_DIR$/src/Bresenham/Bresenham.cpp" />
+        <option value="$PROJECT_DIR$/src/main.cpp" />
+        <option value="$PROJECT_DIR$/src/Bresenham/BresenhamCircle.cpp" />
+        <option value="$PROJECT_DIR$/src/MainLoop.cpp" />
         <option value="$PROJECT_DIR$/src/Bresenham/RasterizedTriangle.cpp" />
       </list>
     </option>
@@ -317,15 +320,16 @@
       <option name="presentableId" value="Default" />
       <updated>1553008257987</updated>
       <workItem from="1553008259828" duration="34550000" />
-      <workItem from="1553225560165" duration="7979000" />
+      <workItem from="1553225560165" duration="8570000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42529000" />
+    <option name="totallyTimeSpent" value="43120000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="78" y="48" width="1599" height="898" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25305074" />
@@ -457,13 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bresenham/BresenhamCircle.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-864">
-          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Bresenham/BresenhamLine.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -516,26 +513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainLoop.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2384">
-          <caret line="130" column="75" selection-start-line="130" selection-start-column="75" selection-end-line="130" selection-end-column="75" />
-          <folding>
-            <element signature="e#48#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bresenham/RasterizedTriangle.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="16" column="66" lean-forward="true" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
-          <folding>
-            <element signature="e#125#147#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Bresenham/Bresenham.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -553,19 +530,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bresenham/RasterizedTriangle.cpp">
+    <entry file="file://$PROJECT_DIR$/src/Bresenham/BresenhamCircle.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        <state relative-caret-position="240">
+          <caret line="41" column="60" selection-start-line="41" selection-start-column="60" selection-end-line="41" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" column="50" lean-forward="true" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
+        <state relative-caret-position="165">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainLoop.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
+          <folding>
+            <element signature="e#48#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bresenham/RasterizedTriangle.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="16" column="66" lean-forward="true" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+          <folding>
+            <element signature="e#125#147#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bresenham/RasterizedTriangle.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+          <folding>
+            <element signature="e#48#79#0" expanded="true" />
           </folding>
         </state>
       </provider>
