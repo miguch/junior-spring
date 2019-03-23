@@ -13,16 +13,16 @@ class BresenhamCircle : public Bresenham {
 private:
     GLfloat r, g, b;
     Point<GLfloat> center;
-    GLfloat radius;
+    GLint radius;
     bool updatedParameters;
     bool updateParameters();
     std::vector<float> pointsData;
 
 public:
-    BresenhamCircle(GLFWwindow* window, GLfloat centerX, GLfloat centerY, GLfloat radius);
+    BresenhamCircle(GLFWwindow* window, GLfloat centerX, GLfloat centerY, GLint radius);
     void draw() override;
     void setCenter(GLfloat x, GLfloat y);
-    void setRadius(GLfloat r);
+    void setRadius(GLint r);
     void setColor(GLfloat r, GLfloat g, GLfloat b);
 };
 

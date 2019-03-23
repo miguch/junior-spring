@@ -43,7 +43,7 @@ Bresenham::Bresenham(GLFWwindow *window) : window(window), shader("shaders/vert.
 // Returns true if there has been a change in the window size
 bool Bresenham::updateWindowSize() {
     int w, h;
-    glfwGetWindowSize(window, &w, &h);
+    glfwGetFramebufferSize(window, &w, &h);
     if (windowWidth != w || windowHeight != h) {
         windowWidth = w;
         windowHeight = h;

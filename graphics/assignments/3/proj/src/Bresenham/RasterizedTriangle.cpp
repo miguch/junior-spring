@@ -15,7 +15,7 @@ void RasterizedTriangle::draw() {
         vector<Bresenham::Point<GLint>> filledPoints;
         int linesSeq[3][3] = {{0, 1, 2},
                               {0, 2, 1},
-                              {1, 2, 3}};
+                              {1, 2, 0}};
         // OpenGL coordinate to display coordinate
         array<Bresenham::Point<GLint>, 3> dispPoints = {{
                                                                 {GLint(vertices[0].x * windowWidth / 2),
@@ -27,6 +27,9 @@ void RasterizedTriangle::draw() {
                                                         }};
         vector<Line> lines;
         lines.reserve(3);
+        if (vertices[2].y > 0.72) {
+            printf("");
+        }
 
         for (auto seq : linesSeq) {
             auto line = Line(dispPoints[seq[0]], dispPoints[seq[1]], dispPoints[seq[2]]);

@@ -35,7 +35,9 @@ void MainLoop::loop(GLFWwindow *window) {
             1,1,1
     };
     array<GLfloat, 2> circle_center = {0, 0};
-    GLfloat circle_radius = 0.3;
+    int w, h;
+    glfwGetFramebufferSize(window, &w, &h);
+    GLint circle_radius = static_cast<GLint>(0.4 * min(w, h) / 2);
     array<GLfloat, 3> circle_color = {
             1,1,1
     };
@@ -75,16 +77,24 @@ void MainLoop::loop(GLFWwindow *window) {
         bool updateVertices = false;
 
         {
+            if (ImGui::BeginMainMenuBar()) {
+                if (ImGui::BeginMenu("Mode")) {
+                    if (current_mode != CIRCLE && ImGui::MenuItem("Circle")) {
+                        current_mode = CIRCLE;
+                    }
+                    if (current_mode != TRIANGLE_OUTLINE && ImGui::MenuItem("Triangle Outline")) {
+                        current_mode = TRIANGLE_OUTLINE;
+                    }
+                    if (current_mode != TRIANGLE_FILLED && ImGui::MenuItem("Triangle Filled")) {
+                        current_mode = TRIANGLE_FILLED;
+                    }
+                    ImGui::EndMenu();
+                }
+                ImGui::EndMainMenuBar();
+            }
+        }
+        {
             ImGui::Begin("Bresenham");
-            if (current_mode != CIRCLE && ImGui::Button("Circle")) {
-                current_mode = CIRCLE;
-            }
-            if (current_mode != TRIANGLE_OUTLINE && ImGui::Button("Triangle Outline")) {
-                current_mode = TRIANGLE_OUTLINE;
-            }
-            if (current_mode != TRIANGLE_FILLED && ImGui::Button("Triangle Filled")) {
-                current_mode = TRIANGLE_FILLED;
-            }
             switch (current_mode) {
                 case TRIANGLE_OUTLINE:
                     ImGui::Text("Vertices Position:");
@@ -108,7 +118,8 @@ void MainLoop::loop(GLFWwindow *window) {
                         dynamic_cast<BresenhamCircle *>(drawer.get())->setCenter(circle_center[0], circle_center[1]);
                     }
                     ImGui::Text("Radius:");
-                    if (ImGui::SliderFloat("##radius", &circle_radius, 0, 1)) {
+                    glfwGetFramebufferSize(window, &w, &h);
+                    if (ImGui::SliderInt("##radius", &circle_radius, 0, min(w, h) / 2)) {
                         dynamic_cast<BresenhamCircle *>(drawer.get())->setRadius(circle_radius);
                     }
                     ImGui::Text("Color: ");

@@ -39,8 +39,7 @@ void BresenhamCircle::draw() {
     if (updateWindowSize() || updateParameters()) {
         //To pixel coordinate
         int cx = center.x * windowWidth / 2, cy = center.y * windowHeight / 2;
-        int pr = radius * min(windowHeight, windowWidth) / 2;
-        auto points = getCirclePoints(cx, cy, pr);
+        auto points = getCirclePoints(cx, cy, radius);
         pointsData.clear();
         for (const auto &point : points) {
             pointsData.push_back(static_cast<float>(point.x) / windowWidth * 2);
@@ -57,14 +56,14 @@ void BresenhamCircle::draw() {
     glDrawArrays(GL_POINTS, 0, pointsData.size() / 6);
 }
 
-BresenhamCircle::BresenhamCircle(GLFWwindow *window, GLfloat centerX, GLfloat centerY, GLfloat radius) : Bresenham(
+BresenhamCircle::BresenhamCircle(GLFWwindow *window, GLfloat centerX, GLfloat centerY, GLint radius) : Bresenham(
         window) {
     setCenter(centerX, centerY);
     setRadius(radius);
     setColor(1, 1, 1);
 }
 
-void BresenhamCircle::setRadius(GLfloat r) {
+void BresenhamCircle::setRadius(GLint r) {
     updatedParameters = true;
     radius = r;
 }
