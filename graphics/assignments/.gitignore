@@ -9,3 +9,4 @@ LearnOpenGL
 imgui/*
 *.a
 
+.vscode
