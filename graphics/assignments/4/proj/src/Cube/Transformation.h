@@ -16,6 +16,7 @@ public:
 class StaticCube : public Transform {
 public:
     glm::mat4 getTransformMatrix() override;
+
 };
 
 class TranslationCube : public Transform {
@@ -31,6 +32,37 @@ public:
 class RotationCube: public Transform {
 public:
     glm::mat4 getTransformMatrix() override;
+    RotationCube(glm::vec3 axis = glm::vec3(1.0f, 0.0f, 1.0f));
+
+private:
+    glm::vec3 axis;
 };
 
+class ScalingCube : public Transform {
+public:
+    glm::mat4 getTransformMatrix() override;
+
+};
+
+class CombinedTransform: public Transform {
+public:
+    glm::mat4 getTransformMatrix() override;
+    CombinedTransform(glm::vec3 rotateAxis, glm::vec3 scale, glm::vec3 translate);
+
+private:
+    glm::vec3 rotateAxis, scale, translate;
+};
+
+class EllipseTransform: public Transform {
+public:
+    glm::mat4 getTransformMatrix() override;
+    EllipseTransform(float a, float b, bool dynamicSpeed=false);
+    bool dynamicSpeed;
+
+private:
+    float a, b;
+    float posValue, time, x, y;
+
+
+};
 #endif //TRANSFORMATION_TRANSFORMATION_H

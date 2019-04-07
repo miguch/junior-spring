@@ -24,10 +24,10 @@ glm::mat4 StaticCube::getTransformMatrix() {
     glm::mat4 model(1.0);
     model = glm::rotate(model, glm::radians(45.0f), glm::vec3(0.5f, 1.0f, 0.0f));
     glm::mat4 view(1.0);
-    view = glm::translate(view, glm::vec3(0, 0.0, -3.0));
+    view = glm::translate(view, glm::vec3(0, 0.0, 0.0));
 
     //set camera
-    view *= glm::lookAt( glm::vec3(0.0f, 0.0f, 8.0f),
+    view *= glm::lookAt( glm::vec3(0.0f, 0.0f, 10.0f),
                          glm::vec3(0.0f, 0.0f, 0.0f),
                          glm::vec3(0.0f, 1.0f, 0.0f));
     glm::mat4 projection(1.0);
@@ -49,10 +49,10 @@ glm::mat4 TranslationCube::getTransformMatrix() {
     if (vertical) {
         y = cos(float(glfwGetTime())) * movingLength;
     }
-    view = glm::translate(view, glm::vec3(x, y, -3.0));
+    view = glm::translate(view, glm::vec3(x, y, 0));
 
     //set camera
-    view *= glm::lookAt( glm::vec3(0.0f, 0.0f, 8.0f),
+    view *= glm::lookAt( glm::vec3(0.0f, 0.0f, 10.0f),
                          glm::vec3(0.0f, 0.0f, 0.0f),
                          glm::vec3(0.0f, 1.0f, 0.0f));
     glm::mat4 projection(1.0);
@@ -71,12 +71,103 @@ glm::mat4 RotationCube::getTransformMatrix() {
     GLuint width, height;
     tie(width, height) = Utils::getScreenSize();
     glm::mat4 model(1.0);
-    model = glm::rotate(model, glm::radians(45.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+    auto weight = static_cast<float>(fmod(float(glfwGetTime()), 3.6));
+    model = glm::rotate(model, glm::radians(weight * 100.0f), axis);
     glm::mat4 view(1.0);
-    view = glm::translate(view, glm::vec3(0, 0.0, -3.0));
+    view = glm::translate(view, glm::vec3(0, 0.0, 0));
 
     //set camera
-    view *= glm::lookAt( glm::vec3(0.0f, 0.0f, 8.0f),
+    view *= glm::lookAt( glm::vec3(0.0f, 0.0f, 10.0f),
+                         glm::vec3(0.0f, 0.0f, 0.0f),
+                         glm::vec3(0.0f, 1.0f, 0.0f));
+    glm::mat4 projection(1.0);
+    projection = glm::perspective(glm::radians(45.0f), float(width) / float(height), 0.1f, 100.0f);
+
+    return toTransformMatrix(model, view, projection);
+}
+
+RotationCube::RotationCube(glm::vec3 axis): axis(axis) {
+
+}
+
+glm::mat4 ScalingCube::getTransformMatrix() {
+    GLuint width, height;
+    tie(width, height) = Utils::getScreenSize();
+    glm::mat4 model(1.0);
+    model = glm::rotate(model, glm::radians(45.0f), glm::vec3(0.5f, 1.0f, 0.0f));
+    //[0.2, 2]
+    auto factor = static_cast<float>((sin(glfwGetTime()) + 1) * 0.9 + 0.2);
+    model = glm::scale(model, glm::vec3(factor, factor, factor));
+    glm::mat4 view(1.0);
+    view = glm::translate(view, glm::vec3(0, 0.0, 0.0));
+
+    //set camera
+    view *= glm::lookAt( glm::vec3(0.0f, 0.0f, 10.0f),
+                         glm::vec3(0.0f, 0.0f, 0.0f),
+                         glm::vec3(0.0f, 1.0f, 0.0f));
+    glm::mat4 projection(1.0);
+    projection = glm::perspective(glm::radians(45.0f), float(width) / float(height), 0.1f, 100.0f);
+
+    return toTransformMatrix(model, view, projection);
+}
+
+glm::mat4 EllipseTransform::getTransformMatrix() {
+    GLuint width, height;
+    tie(width, height) = Utils::getScreenSize();
+    glm::mat4 model(1.0);
+    auto weight = static_cast<float>(fmod(float(glfwGetTime()), 3.6));
+    model = glm::rotate(model, glm::radians(weight * 100.0f), glm::vec3(0, 0, 1));
+
+    glm::mat4 view(1.0);
+
+    if (dynamicSpeed) {
+        auto deltaTime = static_cast<float>(glfwGetTime() - time);
+        time = static_cast<float>(glfwGetTime());
+        float acceleration = (a > b ? (-x + a) / (a) : (-y + b) / (b)) / 1.6 + 0.75;
+        posValue += acceleration * deltaTime;
+    } else {
+        time = posValue = glfwGetTime();
+    }
+
+    x = cos(posValue) * a;
+    y = sin(posValue) * b;
+    view = glm::translate(view, glm::vec3(x, y, 0.0));
+
+    //set camera
+    view *= glm::lookAt( glm::vec3(0.0f, 0.0f, 10.0f),
+                         glm::vec3(0.0f, 0.0f, 0.0f),
+                         glm::vec3(0.0f, 1.0f, 0.0f));
+    glm::mat4 projection(1.0);
+    projection = glm::perspective(glm::radians(45.0f), float(width) / float(height), 0.1f, 100.0f);
+
+    return toTransformMatrix(model, view, projection);
+}
+
+EllipseTransform::EllipseTransform(float a, float b, bool dynamicSpeed): a(a), b(b), dynamicSpeed(dynamicSpeed) {
+    time = static_cast<float>(glfwGetTime());
+    posValue = time;
+    x = cos(posValue) * a;
+    y = sin(posValue) * b;
+}
+
+CombinedTransform::CombinedTransform(glm::vec3 rotateAxis, glm::vec3 scale, glm::vec3 translate):
+rotateAxis(rotateAxis), scale(scale), translate(translate) {
+
+}
+
+glm::mat4 CombinedTransform::getTransformMatrix() {
+    GLuint width, height;
+    tie(width, height) = Utils::getScreenSize();
+    glm::mat4 model(1.0);
+    auto weight = static_cast<float>(fmod(float(glfwGetTime()), 3.6));
+    model = glm::rotate(model, glm::radians(weight * 100.0f), rotateAxis);
+
+    model = glm::scale(model, scale);
+    glm::mat4 view(1.0);
+    view = glm::translate(view, translate);
+
+    //set camera
+    view *= glm::lookAt( glm::vec3(0.0f, 0.0f, 10.0f),
                          glm::vec3(0.0f, 0.0f, 0.0f),
                          glm::vec3(0.0f, 1.0f, 0.0f));
     glm::mat4 projection(1.0);

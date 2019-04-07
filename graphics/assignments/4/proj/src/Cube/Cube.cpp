@@ -86,6 +86,8 @@ Cube::Cube(const char *texture_path, float length, float width, float height) :
 
 }
 
+
+//Get the transform matrix from transformer and pass to vertex shader to perform transform
 void Cube::draw(Transform *transformer) {
     shader->use();
     texture.bind();
