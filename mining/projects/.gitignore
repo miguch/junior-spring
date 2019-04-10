@@ -3,3 +3,6 @@
 !.gitignore
 !*.py
 !*.ipynb
+!reports/*.pdf
+!*.tex
+
