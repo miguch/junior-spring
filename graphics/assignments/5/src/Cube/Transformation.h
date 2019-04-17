@@ -20,8 +20,8 @@ private:
 
 public:
     glm::mat4 getTransformMatrix() override;
-    OrthoTransform(float left, float right, float bottom, float top, float near, float far);
-    float left, right, bottom, top, near, far;
+    OrthoTransform(float left, float right, float bottom, float top, float zNear, float zFar);
+    float left, right, bottom, top, zNear, zFar;
 };
 
 class PerspectiveTransform : public Transform {
@@ -29,8 +29,8 @@ private:
 
 public:
     glm::mat4 getTransformMatrix() override;
-    PerspectiveTransform(float fovy_degree, float aspect, float near, float far);
-    float fovy_degree, aspect, near, far;
+    PerspectiveTransform(float fovy_degree, float aspect, float zNear, float zFar);
+    float fovy_degree, aspect, zNear, zFar;
 };
 
 class ViewChangeTransform : public Transform {

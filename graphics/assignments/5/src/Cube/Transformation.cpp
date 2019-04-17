@@ -27,13 +27,13 @@ glm::mat4 OrthoTransform::getTransformMatrix() {
     glm::mat4 view(1.0);
     view = glm::translate(view, glm::vec3(-1.5, 0.5, -1.5));
     glm::mat4 projection(1.0);
-    projection = glm::ortho(left, right, bottom, top, near, far);
+    projection = glm::ortho(left, right, bottom, top, zNear, zFar);
 
     return toTransformMatrix(model, view, projection);
 }
 
-OrthoTransform::OrthoTransform(float left, float right, float bottom, float top, float near, float far) :
-        left(left), right(right), bottom(bottom), top(top), near(near), far(far) {
+OrthoTransform::OrthoTransform(float left, float right, float bottom, float top, float zNear, float zFar) :
+        left(left), right(right), bottom(bottom), top(top), zNear(zNear), zFar(zFar) {
 
 }
 
@@ -49,14 +49,14 @@ glm::mat4 PerspectiveTransform::getTransformMatrix() {
                         glm::vec3(0.0f, 0.0f, 0.0f),
                         glm::vec3(0.0f, 1.0f, 0.0f));
     glm::mat4 projection(1.0);
-    projection = glm::perspective(glm::radians(fovy_degree), aspect, near, far);
+    projection = glm::perspective(glm::radians(fovy_degree), aspect, zNear, zFar);
 
 
     return toTransformMatrix(model, view, projection);
 }
 
-PerspectiveTransform::PerspectiveTransform(float fovy_degree, float aspect, float near, float far):
-fovy_degree(fovy_degree), aspect(aspect), near(near), far(far) {
+PerspectiveTransform::PerspectiveTransform(float fovy_degree, float aspect, float zNear, float zFar):
+fovy_degree(fovy_degree), aspect(aspect), zNear(zNear), zFar(zFar) {
 
 }
 

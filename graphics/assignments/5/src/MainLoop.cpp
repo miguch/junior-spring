@@ -108,15 +108,15 @@ void MainLoop::loop(GLFWwindow *window) {
                 ImGui::SliderFloat("Right", &ortho->right, -w, w);
                 ImGui::SliderFloat("Bottom", &ortho->bottom, -h, h);
                 ImGui::SliderFloat("Top", &ortho->top, -h, h);
-                ImGui::SliderFloat("Near", &ortho->near, -depth, depth);
-                ImGui::SliderFloat("Far", &ortho->far, -depth, depth);
+                ImGui::SliderFloat("Near", &ortho->zNear, -depth, depth);
+                ImGui::SliderFloat("Far", &ortho->zFar, -depth, depth);
             } else if (current == MODE::PERSPECTIVE) {
                 auto perspective = dynamic_cast<PerspectiveTransform*>(trans[PERSPECTIVE].get());
                 int depth = 100;
                 ImGui::SliderFloat("Fovy Degree", &perspective->fovy_degree, 0, 180);
                 ImGui::SliderFloat("aspect", &perspective->aspect, 0, 10);
-                ImGui::SliderFloat("Near", &perspective->near, 0.1, depth);
-                ImGui::SliderFloat("Far", &perspective->far, 0.1, depth);
+                ImGui::SliderFloat("Near", &perspective->zNear, 0.1, depth);
+                ImGui::SliderFloat("Far", &perspective->zFar, 0.1, depth);
             } else if (current == MODE::VIEW_CHANGING) {
                 auto views = dynamic_cast<ViewChangeTransform*>(trans[VIEW_CHANGING].get());
                 const char * labels[3] = {"x", "y", "z"};

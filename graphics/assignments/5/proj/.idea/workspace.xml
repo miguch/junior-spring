@@ -2,15 +2,15 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="Camera" targetName="uninstall" />
-      <config projectName="Camera" targetName="glm_static" />
-      <config projectName="Camera" targetName="glm_shared" />
-      <config projectName="Camera" targetName="imgui" />
-      <config projectName="Camera" targetName="glad" />
-      <config projectName="Camera" targetName="glfw" />
-      <config projectName="Camera" targetName="copy-resources" />
       <config projectName="Camera" targetName="Camera-macos" />
+      <config projectName="Camera" targetName="glm_static" />
+      <config projectName="Camera" targetName="glad" />
+      <config projectName="Camera" targetName="imgui" />
+      <config projectName="Camera" targetName="copy-resources" />
+      <config projectName="Camera" targetName="glm_shared" />
       <config projectName="Camera" targetName="test-macos" />
+      <config projectName="Camera" targetName="uninstall" />
+      <config projectName="Camera" targetName="glfw" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -20,7 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1f8f327-6fc9-4f52-9b5c-fbd2931244e9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/bin/Camera-macos" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Camera-macos" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16340024_陈铭涛_HW5_v0.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../16340024_陈铭涛_HW5_v0.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Cube/Transformation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Cube/Transformation.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/Cube/Transformation.h" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Cube/Transformation.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/MainLoop.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/MainLoop.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../template/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../template/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../template/dependencies/GLFW/src/glfw3.pc" beforeDir="false" afterPath="$PROJECT_DIR$/../../template/dependencies/GLFW/src/glfw3.pc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../template/dependencies/GLFW/src/glfw_config.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../template/dependencies/GLFW/src/glfw_config.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../mining/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../mining/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../testing/Lecture-note/Lec.7-Chap.2.3 Process and Approaches of Software Testing.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../testing/Lecture-note/Lec.7-Chap.2.3 Process and Approaches of Software Testing.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../testing/Lecture-note/Lec.9-Chap.2.5 Classification of Software Testing.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../testing/Lecture-note/Lec.9-Chap.2.5 Classification of Software Testing.pdf" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -48,7 +58,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MainLoop.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="2530">
               <caret line="110" column="53" selection-start-line="110" selection-start-column="53" selection-end-line="110" selection-end-column="53" />
               <folding>
                 <element signature="e#48#69#0" expanded="true" />
@@ -60,7 +70,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cube/ColoredCube.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1391">
+            <state relative-caret-position="414">
               <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
               <folding>
                 <element signature="e#48#72#0" expanded="true" />
@@ -72,7 +82,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cube/Transformation.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
+            <state relative-caret-position="713">
               <caret line="31" column="81" selection-start-line="31" selection-start-column="81" selection-end-line="31" selection-end-column="81" />
               <folding>
                 <element signature="e#129#151#0" expanded="true" />
@@ -84,7 +94,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Camera/Camera.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1190">
+            <state relative-caret-position="1104">
               <caret line="48" column="31" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="31" />
               <folding>
                 <element signature="e#48#67#0" expanded="true" />
@@ -96,7 +106,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
+            <state relative-caret-position="184">
               <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
             </state>
           </provider>
@@ -105,7 +115,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Camera/Camera.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
+            <state relative-caret-position="1104">
               <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
               <folding>
                 <element signature="e#98#120#0" expanded="true" />
@@ -117,8 +127,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Cube/Transformation.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="58" column="60" selection-start-line="58" selection-start-column="60" selection-end-line="58" selection-end-column="60" />
+            <state relative-caret-position="616">
+              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
               <folding>
                 <element signature="e#48#75#0" expanded="true" />
                 <marker date="1555002599146" expanded="true" signature="1467:1573" ph="..." />
@@ -395,12 +405,13 @@
       <workItem from="1554214023548" duration="66000" />
       <workItem from="1554214103091" duration="1060000" />
       <workItem from="1554215481410" duration="51995000" />
-      <workItem from="1554864318261" duration="37362000" />
+      <workItem from="1554864318261" duration="37519000" />
+      <workItem from="1555128088990" duration="8000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142617000" />
+    <option name="totallyTimeSpent" value="142782000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -416,7 +427,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.31149647" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.31535003" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32642487" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32901555" />
@@ -425,7 +436,7 @@
       <window_info anchor="bottom" id="Version Control" order="4" weight="0.32901555" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32642487" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.32642487" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.32642487" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.3976684" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="CMake" order="10" weight="0.3277202" />
@@ -475,16 +486,12 @@
     <entry file="file://$PROJECT_DIR$/bin/shaders/texture_frag.glsl">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/resources/GreyOak.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/resources/GreyOak.jpg" />
     <entry file="file://$PROJECT_DIR$/bin/imgui.ini">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/box.jpg" />
-    <entry file="file://$PROJECT_DIR$/resources/container.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/container.jpg" />
     <entry file="file://$PROJECT_DIR$/resources/grunge.jpg" />
     <entry file="file://$PROJECT_DIR$/resources/glass.jpg" />
     <entry file="file://$PROJECT_DIR$/src/Cube/OrbitSystem.cpp" />
@@ -587,16 +594,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dependencies/GLM/glm/detail/type_vec.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="458" column="32" selection-start-line="458" selection-start-column="32" selection-end-line="458" selection-end-column="32" />
-          <folding>
-            <element signature="e#1901#1926#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dependencies/GLM/glm/detail/type_vec.hpp" />
     <entry file="file://$PROJECT_DIR$/dependencies/GLM/glm/detail/func_trigonometric.inl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
@@ -747,19 +745,39 @@
     <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Camera/Camera.h">
+    <entry file="file://$PROJECT_DIR$/src/MainLoop.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+        <state relative-caret-position="2530">
+          <caret line="110" column="53" selection-start-line="110" selection-start-column="53" selection-end-line="110" selection-end-column="53" />
           <folding>
-            <element signature="e#98#120#0" expanded="true" />
+            <element signature="e#48#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cube/ColoredCube.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding>
+            <element signature="e#48#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cube/Transformation.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="31" column="81" selection-start-line="31" selection-start-column="81" selection-end-line="31" selection-end-column="81" />
+          <folding>
+            <element signature="e#129#151#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Camera/Camera.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1190">
+        <state relative-caret-position="1104">
           <caret line="48" column="31" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="31" />
           <folding>
             <element signature="e#48#67#0" expanded="true" />
@@ -769,45 +787,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
+        <state relative-caret-position="184">
           <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cube/ColoredCube.cpp">
+    <entry file="file://$PROJECT_DIR$/src/Camera/Camera.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1391">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        <state relative-caret-position="1104">
+          <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
           <folding>
-            <element signature="e#48#72#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainLoop.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="110" column="53" selection-start-line="110" selection-start-column="53" selection-end-line="110" selection-end-column="53" />
-          <folding>
-            <element signature="e#48#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cube/Transformation.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="31" column="81" selection-start-line="31" selection-start-column="81" selection-end-line="31" selection-end-column="81" />
-          <folding>
-            <element signature="e#129#151#0" expanded="true" />
+            <element signature="e#98#120#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cube/Transformation.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="58" column="60" selection-start-line="58" selection-start-column="60" selection-end-line="58" selection-end-column="60" />
+        <state relative-caret-position="616">
+          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
           <folding>
             <element signature="e#48#75#0" expanded="true" />
             <marker date="1555002599146" expanded="true" signature="1467:1573" ph="..." />
