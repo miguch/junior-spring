@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+% Chinese Support
+\usepackage{xeCJK}
+\setCJKmainfont{STSong}
+% \setmainfont{Times New Roman}
+
+\usepackage{float}
+
+% for symbol
+\usepackage{gensymb}
+% matrix
+\usepackage{amsmath}
+
+% For images
+\usepackage{graphicx}
+\graphicspath{ {./screenshoot/} }
+
+\newcommand{\numpy}{{\tt numpy}}    % tt font for numpy
+
+\topmargin -1.in
+\textheight 9in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\textwidth 7in
+
+
+\usepackage{listings}
+\usepackage{color}
+\usepackage{xcolor}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{textblue}{rgb}{.2,.2,.7}
+\definecolor{textred}{rgb}{0.77,0,0}
+\definecolor{textgreen}{rgb}{0,0.43,0}
+
+% \setmonofont{FiraCode-Regular}
+\lstset{frame=tb,
+  language=C++,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue}\itshape,
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  commentstyle=\color{textred}\itshape,
+  tabsize=3
+}
+
+
+
+% Content start below
+\begin{document}
+
+\author{陈铭涛\\16340024}
+\title{数据挖掘周报 2}
+% \date{\vspace{-5ex}}
+\maketitle
+
+\medskip
+
+% ========== Begin answering questions here
+
+\section{这两周所做工作}
+\begin{enumerate}
+    \item 继续先前甜橙杯的内容，在先前的统计特征数据的基础上增加了：
+    \begin{description}
+        \item[$\bullet$]对 WiFi、Mac 地址等字段的统计，反应单个网络地址被多个用户使用的情况。
+        \item[$\bullet$]对 os、version、device 等字段进行了流行度的统计。
+        \item[$\bullet$]使用 KMeans 对用户地址进行了聚类，对各聚类的正样本比例进行统计。
+        \item[$\bullet$]统计了字段间的关联特征，如操作的 version 和时间与位置的关系。
+        \item[$\bullet$]统计了用户在不同的设备、版本等状态下的每次交易资金占账户比例的情况。    
+    \end{description}
+    
+    \item 尝试参加Kaggle 上的 Santander Customer Transaction Prediction，这个比赛的特点是特征都是匿名特征，在处理时不能知道特征的具体内涵是什么。完成的内容有：
+    \begin{description}
+        \item[$\bullet$]在未进行特征处理的情况下直接使用 LightGBM，分数为0.89437。
+        \item[$\bullet$]阅读了比赛讨论区的内容和几个开源kernel，进行了少量的特征处理，但分数与处理前相比尚未获得多少提升。
+    \end{description}
+    \item 尝试参加Kaggle 上的 Jigsaw Unintended Bias in Toxicity Classification，这个比赛的目标是对给出的用户评论数据给出毒性分数，并需要降低一些与身份相关的词汇对结果的影响，因此需要使用到 NLP 方面的内容。比赛是 Kernel Only 的比赛，结果必须在 Kaggle 上通过提交 kernel 获得。
+    \begin{description}
+        \item[$\bullet$]目前的工作暂时忽略了题目降低部分词汇对结果影响的要求，仅学习如何通过 NLP 的方法对给出的评论数据进行分类。
+        \item[$\bullet$]Bag of Words, 使用 sklearn 的 CountVectorizer 将数据中的句子词频向量化，分类模型使用 SGDClasssifier，获得的分数为0.85771。
+        \item[$\bullet$]Deep Learning, 参考 Pytorch 教程与文档使用 LSTM 进行分类，获得分数为0.93150。
+
+    \end{description}
+\end{enumerate}
+
+\section{遇到的问题}
+\begin{enumerate}
+    \item 在甜橙杯中新提取的特征对结果分数的提升作用不大，在复赛数据中获得的分数仍然非常糟糕。通过 LightGBM 的 \lstinline{feature_importances_} 查看到许多新添加的特征的重要度都为0，即新的特征并没有在训练中在任何决策树中被用到，说明在特征处理需要重新找一下方向。
+    \item 在桑坦德银行的比赛中对匿名特征没找到多少可以进行特征处理的方向，目前仍然在通过阅读讨论区和开源 Kernel 了解如何进一步提升分数。
+    \item 在评论毒性分类的比赛中需要了解如何对自然语言进行处理，通过 Pytorch 搭建的 RNN 网络一开始一直遇到 Kernel 提交后运行超时或者爆显存的问题，查了一些例子并使用了预训练的词向量后才完成运行。
+\end{enumerate}
+
+
+\section{下一阶段计划}
+
+
+
+\end{document}
+\grid
+\grid

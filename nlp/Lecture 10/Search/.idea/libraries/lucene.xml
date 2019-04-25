@@ -1,0 +1,33 @@
+<component name="libraryTable">
+  <library name="lucene">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../lucene/core" />
+      <root url="file://$PROJECT_DIR$/../lucene/demo" />
+      <root url="file://$PROJECT_DIR$/../lucene/queryparser" />
+      <root url="jar://$PROJECT_DIR$/../lucene/analysis/common/lucene-analyzers-common-8.0.0.jar!/" />
+      <root url="file://$PROJECT_DIR$/../lucene/analysis/common" />
+      <root url="file://$PROJECT_DIR$/../lucene/analysis/icu" />
+      <root url="file://$PROJECT_DIR$/../lucene/analysis/kuromoji" />
+      <root url="file://$PROJECT_DIR$/../lucene/analysis/morfologik" />
+      <root url="file://$PROJECT_DIR$/../lucene/analysis/nori" />
+      <root url="file://$PROJECT_DIR$/../lucene/analysis/opennlp" />
+      <root url="file://$PROJECT_DIR$/../lucene/analysis/phonetic" />
+      <root url="file://$PROJECT_DIR$/../lucene/analysis/smartcn" />
+      <root url="file://$PROJECT_DIR$/../lucene/analysis/stempel" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../lucene/analysis/common" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../lucene/analysis/icu" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../lucene/analysis/kuromoji" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../lucene/analysis/morfologik" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../lucene/analysis/nori" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../lucene/analysis/opennlp" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../lucene/analysis/phonetic" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../lucene/analysis/smartcn" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../lucene/analysis/stempel" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../lucene/core" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../lucene/demo" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../lucene/queryparser" recursive="false" />
+  </library>
+</component>
