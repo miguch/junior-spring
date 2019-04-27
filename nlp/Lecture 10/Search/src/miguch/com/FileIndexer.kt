@@ -11,8 +11,9 @@ import org.apache.lucene.queryparser.classic.QueryParser
 import org.apache.lucene.search.spell.LuceneDictionary
 import org.apache.lucene.search.spell.SpellChecker
 import org.apache.lucene.store.Directory
-import org.apache.lucene.store.FSDirectory
+import org.apache.lucene.store.MMapDirectory
 import java.io.BufferedReader
+import java.io.File
 import java.io.IOException
 import java.io.InputStreamReader
 import java.nio.charset.StandardCharsets
@@ -43,21 +44,20 @@ class FileIndexer(directory: String) {
             System.exit(1)
         }
         try {
-            indexDir = FSDirectory.open(Paths.get(directory, "index"))
+            File(Paths.get(directory, "index").toUri()).deleteRecursively()
+            indexDir = MMapDirectory.open(Paths.get(directory, "index"))
             checker = SpellChecker(indexDir)
-            ireader = DirectoryReader.open(indexDir)
 
             val iwc = IndexWriterConfig(analyzer)
             iwc.openMode = IndexWriterConfig.OpenMode.CREATE
-
-
-            checker!!.indexDictionary(LuceneDictionary(ireader, "Contents"), IndexWriterConfig(analyzer), true)
 
             val writer = IndexWriter(indexDir!!, iwc)
             indexDir(writer, path)
 
             writer.close()
 
+            ireader = DirectoryReader.open(indexDir)
+            checker!!.indexDictionary(LuceneDictionary(ireader, "Contents"), IndexWriterConfig(analyzer), false)
         } catch (e: IOException) {
             e.printStackTrace()
         }
@@ -69,6 +69,9 @@ class FileIndexer(directory: String) {
         Files.walkFileTree(filesDir, EnumSet.noneOf(FileVisitOption::class.java), 1, object : SimpleFileVisitor<Path>() {
             @Throws(IOException::class)
             override fun visitFile(file: Path, attrs: BasicFileAttributes): FileVisitResult {
+                if (file.fileName.toString().equals(".DS_Store")) {
+                    return FileVisitResult.CONTINUE
+                }
                 try {
                     indexDoc(writer, file)
                 } catch (ignored: IOException) {

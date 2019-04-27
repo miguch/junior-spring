@@ -1,5 +1,7 @@
 package miguch.com
 
+import org.apache.lucene.index.MultiTerms
+import org.apache.lucene.index.PostingsEnum
 import org.apache.lucene.index.Term
 import org.apache.lucene.search.IndexSearcher
 import org.apache.lucene.search.highlight.*
@@ -11,7 +13,7 @@ import kotlin.collections.ArrayList
 class Searcher {
 
     private val indexer = FileIndexer("resources/page")
-    private val parser = indexer.queryParser
+
     private val ireader = indexer.ireader
     private val isearcher = IndexSearcher(ireader)
     fun search(queryText: String): List<SearchResult> {
@@ -23,17 +25,16 @@ class Searcher {
         highlighter.textFragmenter = fragmenter
         var results = ArrayList<SearchResult>()
 
-        val hits = isearcher.search(query, 12)
+        val hits = isearcher.search(query, 20)
 
         for (hit in hits.scoreDocs) {
             val hitDoc = isearcher.doc(hit.doc)
-
             val content = hitDoc.get("Contents")
             val path = hitDoc.get("Path")
             val tokenStream = TokenSources.getAnyTokenStream(ireader, hit.doc, "Contents", indexer.analyzer)
             val frags = highlighter.getBestFragments(tokenStream, content, 10)
 
-            results.add(SearchResult(frags.first(), path))
+            results.add(SearchResult(frags.first(), path, hit.score))
         }
 
         return results
@@ -42,6 +43,39 @@ class Searcher {
     fun getSimilars(queryText: String): Array<String> {
         return indexer.checker!!.suggestSimilar(queryText, 5)
     }
+
+    fun getInvertedIndex(): List<String> {
+        val terms = MultiTerms.getTerms(ireader, "Contents")
+        val it = terms.iterator()
+        var term = it.next()
+        var result = ArrayList<String>()
+        println("Getting a total of ${terms.size()} indexes")
+        var count = 0
+        while (term != null) {
+            val termString = term.utf8ToString()
+            var termResult = StringBuilder("$termString: [")
+            if (ireader != null) {
+                for (lrc in ireader.leaves()) {
+                    val lr = lrc.reader()
+                    val pe = lr.postings(Term("Contents", termString))
+                    var docId = pe.nextDoc()
+                    while (docId != PostingsEnum.NO_MORE_DOCS) {
+                        val doc = lr.document(docId)
+                        termResult.append("${doc.get("Path").split("/").last()} ")
+                        docId = pe.nextDoc()
+                    }
+                }
+            }
+            termResult.append("]")
+            result.add(termResult.toString())
+            term = it.next()
+            ++count
+            print("\r$count / ${terms.size()}                         ")
+        }
+        println()
+        return result
+    }
+
 }
 
 

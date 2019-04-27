@@ -36,6 +36,11 @@ class WebService {
             handleQuery(request.params(":query"), response)
         }
 
+        http.get("/index") {
+            println("Querying Index")
+            handleIndexQuery()
+        }
+
         http.get("/") {
             htmlHead + searchFormBody + htmlTailWithScript
         }
@@ -51,36 +56,46 @@ class WebService {
         return htmlHead + searchFormBody + toSimilarsList(similars) + toResultList(searchResults) + htmlTailWithScript
     }
 
-    fun toResultList(items: List<SearchResult>) : String {
+    private fun handleIndexQuery(): String {
+        val indexes = searcher.getInvertedIndex()
+        var allIndexes = StringBuilder()
+        for (index in indexes) {
+            allIndexes.append("<p>$index</p>")
+        }
+        println("Service")
+        return allIndexes.toString()
+    }
+
+    private fun toResultList(items: List<SearchResult>): String {
         if (items.isEmpty()) {
             return "<p><b>No Search Result</b></p>"
         }
-        var result = ""
+        var result = StringBuilder()
         for (item in items) {
             val name = item.path.split('/').last()
-            result += """
-                <a href="/file/$name">$name</a>
+            result.append("""
+                <a href="/file/$name">$name</a>   <span>(Score: ${item.score})</span>
                 <p>${item.bestFragment}</p>
-            """.trimIndent()
+            """.trimIndent())
         }
-        return result
+        return result.toString()
     }
 
-    fun toSimilarsList(similars: Array<String>) : String {
+    private fun toSimilarsList(similars: Array<String>): String {
         if (similars.isEmpty()) {
             return "<p><b>No Suggestion</b></p>"
         }
-        var result = "<p>Possible words: "
+        var result = StringBuilder("<p>Possible words: ")
         for (similar in similars) {
             val item = """
                 <a href="/search/$similar">$similar</a><span>  </span>
             """.trimIndent()
-            result += item
+            result.append(item)
         }
-        return "$result</p>"
+        return "${result.toString()}</p>"
     }
 
-    val htmlHead = """
+    private val htmlHead = """
         <!DOCTYPE html>
         <html lang="en">
         <head>
@@ -121,7 +136,7 @@ class WebService {
         </html>
     """.trimIndent()
 
-    val searchFormBody = """
+    private val searchFormBody = """
         <body>
         <h1>Search</h1>
         <form id="search-form">
@@ -132,6 +147,9 @@ class WebService {
             <br/>
             <button type="submit" style="margin-top: 20px;">
                 Search
+            </button>
+            <button style="margin-top: 20px;" onclick='window.location.pathname = "/index"'>
+                See Indexes
             </button>
         </form>
     """.trimIndent()

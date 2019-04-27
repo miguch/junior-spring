@@ -1,9 +1,10 @@
 package miguch.com
 
-class SearchResult(val bestFragment: String, val path: String) {
+class SearchResult(val bestFragment: String, val path: String, val score: Float) {
     override fun toString(): String {
         return "$path: $bestFragment"
     }
+
     val ANSI_RESET = "\u001B[0m"
     val ANSI_BLACK = "\u001B[30m"
     val ANSI_RED = "\u001B[31m"

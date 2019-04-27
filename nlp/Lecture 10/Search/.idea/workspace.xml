@@ -3,12 +3,227 @@
   <component name="ChangeListManager">
     <list default="true" id="e42a7711-9ea2-458e-b02f-90def6f7b54a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../../mining/projects/reports/2/report_2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../../mining/projects/reports/2/report_2.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lucene.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lucene.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Search.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Search.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Search/miguch/com/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/miguch/com/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/META-INF/Search.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/miguch/com/FileIndexer$indexDir$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/miguch/com/FileIndexer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/miguch/com/SearchResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/miguch/com/Searcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/miguch/com/SearcherKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/miguch/com/WebService$run$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/miguch/com/WebService$run$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/miguch/com/WebService$run$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/miguch/com/WebService$run$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/miguch/com/WebService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/miguch/com/WebServiceKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/100.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/101.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/102.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/103.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/104.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/105.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/106.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/107.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/108.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/109.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/110.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/111.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/112.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/113.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/114.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/115.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/116.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/117.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/118.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/119.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/12.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/120.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/121.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/122.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/123.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/124.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/125.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/126.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/127.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/128.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/129.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/13.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/130.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/131.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/132.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/133.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/134.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/135.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/136.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/137.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/138.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/139.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/140.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/141.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/142.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/143.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/144.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/145.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/146.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/147.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/148.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/149.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/15.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/150.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/151.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/152.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/153.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/154.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/155.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/156.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/157.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/158.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/159.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/16.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/160.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/161.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/162.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/163.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/164.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/165.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/166.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/167.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/168.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/169.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/17.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/170.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/171.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/172.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/173.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/174.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/175.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/176.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/177.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/178.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/179.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/18.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/180.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/181.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/182.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/183.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/184.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/185.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/186.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/187.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/188.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/189.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/19.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/190.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/191.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/192.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/193.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/21.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/22.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/23.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/24.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/25.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/26.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/27.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/28.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/29.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/30.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/31.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/32.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/34.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/35.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/36.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/37.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/38.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/39.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/40.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/41.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/42.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/43.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/44.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/45.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/46.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/48.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/49.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/50.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/51.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/52.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/53.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/54.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/55.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/56.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/57.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/58.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/59.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/60.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/61.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/62.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/63.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/64.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/65.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/66.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/67.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/68.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/69.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/70.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/71.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/72.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/73.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/74.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/75.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/76.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/77.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/78.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/79.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/80.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/81.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/82.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/83.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/84.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/85.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/86.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/87.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/88.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/89.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/90.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/91.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/92.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/93.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/94.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/95.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/96.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/97.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/98.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/99.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/index/_1u.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/index/_1u.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/index/_1u.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/index/segments_1a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Search/page/index/write.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page/index/_1x.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page/index/_1x.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page/index/_1x.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page/index/segments_1c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/page/index/write.lock" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/miguch/com/FileIndexer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/miguch/com/FileIndexer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/miguch/com/SearchResult.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/miguch/com/SearchResult.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/miguch/com/Searcher.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/miguch/com/Searcher.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/miguch/com/WebService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/miguch/com/WebService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../testing/Lecture-note/Lec.9-Chap.2.5 Classification of Software Testing.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../testing/Lecture-note/Lec.9-Chap.2.5 Classification of Software Testing.pdf" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,25 +235,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/miguch/com/Searcher.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-62">
-              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+            <state relative-caret-position="159">
+              <caret line="69" column="44" selection-start-line="69" selection-start-column="44" selection-end-line="69" selection-end-column="44" />
               <folding>
-                <element signature="e#20#252#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/miguch/com/FileIndexer.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-939">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-              <folding>
-                <element signature="e#21#808#0" expanded="true" />
+                <element signature="e#20#338#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -47,20 +250,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/miguch/com/SearchResult.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="46">
+              <caret line="2" column="79" selection-start-line="2" selection-start-column="79" selection-end-line="2" selection-end-column="79" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/miguch/com/WebService.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="55" column="51" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
+            <state relative-caret-position="1748">
+              <caret line="76" column="50" selection-start-line="76" selection-start-column="50" selection-end-line="76" selection-end-column="50" />
               <folding>
                 <element signature="e#20#140#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="92">
+                <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -93,17 +317,19 @@
         <option value="$PROJECT_DIR$/src/miguch/com/Main.java" />
         <option value="$PROJECT_DIR$/src/miguch/com/FileIndex.java" />
         <option value="$PROJECT_DIR$/src/miguch/com/test.java" />
-        <option value="$PROJECT_DIR$/src/miguch/com/SearchResult.kt" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/miguch/com/FileIndexer.kt" />
-        <option value="$PROJECT_DIR$/src/miguch/com/Searcher.kt" />
+        <option value="$PROJECT_DIR$/src/miguch/com/SearchResult.kt" />
         <option value="$PROJECT_DIR$/src/miguch/com/WebService.kt" />
+        <option value="$PROJECT_DIR$/src/miguch/com/FileIndexer.kt" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/miguch/com/Searcher.kt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="102" />
-    <option name="y" value="70" />
+    <option name="x" value="100" />
+    <option name="y" value="68" />
     <option name="width" value="1440" />
     <option name="height" value="874" />
   </component>
@@ -134,12 +360,6 @@
             </path>
             <path>
               <item name="Search" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Search" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Search" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -156,10 +376,10 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556298893189" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556348591858" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
@@ -242,15 +462,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556109428428</updated>
-      <workItem from="1556109429792" duration="30609000" />
+      <workItem from="1556109429792" duration="40638000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30609000" />
+    <option name="totallyTimeSpent" value="40638000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="102" y="70" width="1440" height="874" extended-state="0" />
+    <frame x="100" y="68" width="1440" height="874" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" />
@@ -259,18 +479,18 @@
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Web" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" weight="0.32992327" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32992327" />
+      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32992327" />
       <window_info anchor="bottom" id="Java Enterprise" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32992327" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29795396" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29795396" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39897698" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -296,13 +516,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/miguch/com/Searcher.kt</url>
-          <line>44</line>
+          <line>78</line>
           <properties />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/miguch/com/Searcher.kt</url>
-          <line>73</line>
+          <line>107</line>
           <properties />
           <option name="timeStamp" value="16" />
         </line-breakpoint>
@@ -319,61 +539,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../lucene/queryparser/lucene-queryparser-8.0.0.jar!/org/apache/lucene/queryparser/classic/QueryParser.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="45" column="11" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../lucene/core/lucene-core-8.0.0.jar!/org/apache/lucene/search/IndexSearcher.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="212" column="19" selection-start-line="212" selection-start-column="19" selection-end-line="212" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../lucene/core/lucene-core-8.0.0.jar!/org/apache/lucene/document/Document.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="141" selection-start-line="141" selection-end-line="141" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../lucene/core/lucene-core-8.0.0.jar!/org/apache/lucene/index/IndexReader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/spark-master/src/main/java/spark/Experimental.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#1171#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/spark-master/src/main/java/spark/Filter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/miguch/com/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/miguch/com/FileIndex.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
@@ -419,13 +584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/Search/miguch/com/WebService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/out/production/Search/miguch/com/WebServiceKt.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -450,24 +608,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/spark-kotlin-1.0.0-alpha.jar!/spark/kotlin/HttpKt.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="51" column="11" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ideaLibSources/lucene-core-8.0.0-sources.jar!/org/apache/lucene/search/Query.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/lucene-core-8.0.0-sources.jar!/org/apache/lucene/index/DirectoryReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="873">
-          <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -482,13 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/lucene-core-8.0.0-sources.jar!/org/apache/lucene/document/Field.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="232" column="9" selection-start-line="232" selection-start-column="9" selection-end-line="232" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -591,17 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/lucene-core-8.0.0-sources.jar!/org/apache/lucene/search/IndexSearcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="427" column="17" selection-start-line="427" selection-start-column="17" selection-end-line="427" selection-end-column="17" />
-          <folding>
-            <element signature="e#11208#11209#0" expanded="true" />
-            <element signature="e#11231#11232#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/kotlin-stdlib-sources.jar!/kotlin/Any.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
@@ -678,39 +804,130 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/miguch/com/Searcher.kt">
+    <entry file="jar://$PROJECT_DIR$/lib/spark-kotlin-1.0.0-alpha.jar!/spark/kotlin/HttpKt.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-62">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-          <folding>
-            <element signature="e#20#252#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="174">
+          <caret line="51" column="11" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/miguch/com/FileIndexer.kt">
+    <entry file="file://$PROJECT_DIR$/out/production/Search/miguch/com/SearchResult.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-939">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#21#808#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="23">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/Search/miguch/com/FileIndexer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ideaLibSources/lucene-core-8.0.0-sources.jar!/org/apache/lucene/index/MultiFields.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-566">
+          <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/Search/miguch/com/WebService.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ideaLibSources/lucene-core-8.0.0-sources.jar!/org/apache/lucene/document/Field.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1032">
+          <caret line="90" column="12" selection-start-line="90" selection-start-column="12" selection-end-line="90" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/miguch/com/SearchResult.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="46">
+          <caret line="2" column="79" selection-start-line="2" selection-start-column="79" selection-end-line="2" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ideaLibSources/lucene-core-8.0.0-sources.jar!/org/apache/lucene/index/DirectoryReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ideaLibSources/lucene-core-8.0.0-sources.jar!/org/apache/lucene/store/RAMDirectory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="57" column="13" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ideaLibSources/lucene-core-8.0.0-sources.jar!/org/apache/lucene/store/MMapDirectory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="124" column="32" selection-start-line="124" selection-start-column="32" selection-end-line="124" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/miguch/com/WebService.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="55" column="51" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
+        <state relative-caret-position="1748">
+          <caret line="76" column="50" selection-start-line="76" selection-start-column="50" selection-end-line="76" selection-end-column="50" />
           <folding>
             <element signature="e#20#140#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="92">
+            <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/miguch/com/FileIndexer.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180">
+          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+          <folding>
+            <element signature="e#21#810#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ideaLibSources/lucene-core-8.0.0-sources.jar!/org/apache/lucene/search/IndexSearcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="427" column="17" selection-start-line="427" selection-start-column="17" selection-end-line="427" selection-end-column="17" />
+          <folding>
+            <element signature="e#11208#11209#0" expanded="true" />
+            <element signature="e#11231#11232#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/miguch/com/Searcher.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="69" column="44" selection-start-line="69" selection-start-column="44" selection-end-line="69" selection-end-column="44" />
+          <folding>
+            <element signature="e#20#338#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -721,10 +938,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>Search:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
