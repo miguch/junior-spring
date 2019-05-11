@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+% Chinese Support
+\usepackage{xeCJK}
+\setCJKmainfont{STSong}
+% \setmainfont{Times New Roman}
+
+\usepackage{float}
+
+% for symbol
+\usepackage{gensymb}
+% matrix
+\usepackage{amsmath}
+
+% For images
+\usepackage{graphicx}
+\graphicspath{ {./screenshoot/} }
+
+\newcommand{\numpy}{{\tt numpy}}    % tt font for numpy
+
+\topmargin -1.in
+\textheight 9in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\textwidth 7in
+
+
+\usepackage{listings}
+\usepackage{color}
+\usepackage{xcolor}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{textblue}{rgb}{.2,.2,.7}
+\definecolor{textred}{rgb}{0.77,0,0}
+\definecolor{textgreen}{rgb}{0,0.43,0}
+
+% \setmonofont{FiraCode-Regular}
+\lstset{frame=tb,
+  language=C++,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue}\itshape,
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  commentstyle=\color{textred}\itshape,
+  tabsize=3
+}
+
+
+
+% Content start below
+\begin{document}
+
+\author{陈铭涛\\16340024}
+\title{数据挖掘周报 3}
+% \date{\vspace{-5ex}}
+\maketitle
+
+\medskip
+
+% ========== Begin answering questions here
+
+\section{这两周所做工作}
+\begin{enumerate}
+    \item 下载并了解京东杯 用户对品类下店铺的购买预测 的数据集内容
+    \item 查找包括去年 JDATA 比赛在内的购买预测方向的数据挖掘竞赛的内容，学习该类竞赛中的数据清洗、特征工程、训练集构建、模型验证以及模型选择的方法。
+    \item 进行了初步的京东杯比赛的特征处理，目前初步的做法是将需要预测的时间段前90天内的用户操作、评论操作、时间分布与间隔，以及用户本身的信息作为特征，将特征集时间后的一周内的用户购买情况作为标签进行训练。目前特征处理的内容尚未完成，因此还未进行模型的训练。
+\end{enumerate}
+
+\section{遇到的问题}
+\begin{enumerate}
+    \item 京东杯比赛数据量较大，全部数据从 csv 读取后就需要 5G 以上内存，在 Jupyter Notebook 中偶尔某个 cell 运行出错后其使用的内存即使执行\lstinline{gc.collect()}也未能释放，在特征处理阶段中的内存占用经常到达 15G 以上，只能重启 kernel 来释放占用的内存，重新执行先前的操作，导致进度较慢。
+\end{enumerate}
+
+
+\section{下一阶段计划}
+
+\begin{enumerate}
+    \item 继续进行京东杯的内容。
+    \item 期末考核的比赛出来后，与京东杯对比看看决定是否要继续进行京东杯的工作。
+\end{enumerate}
+
+\end{document}
+\grid
+\grid
