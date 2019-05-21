@@ -1,0 +1,60 @@
+Using 1 threads
+Load time: 3523ms
+1 threads training time: 45245ms
+Train score: 0.10159365019000322
+1 threads predict time: 42ms
+Using 2 threads
+Load time: 3526ms
+2 threads training time: 26807ms
+Train score: 0.10159365019000322
+2 threads predict time: 25ms
+Using 3 threads
+Load time: 3506ms
+3 threads training time: 18994ms
+Train score: 0.10159365019000322
+3 threads predict time: 19ms
+Using 4 threads
+Load time: 3607ms
+4 threads training time: 15709ms
+Train score: 0.10159365019000322
+4 threads predict time: 16ms
+Using 5 threads
+Load time: 3568ms
+5 threads training time: 14189ms
+Train score: 0.10159365019000322
+5 threads predict time: 15ms
+Using 6 threads
+Load time: 3550ms
+6 threads training time: 12669ms
+Train score: 0.10159365019000322
+6 threads predict time: 16ms
+Using 7 threads
+Load time: 3635ms
+7 threads training time: 12023ms
+Train score: 0.10159365019000322
+7 threads predict time: 15ms
+Using 8 threads
+Load time: 3724ms
+8 threads training time: 12220ms
+Train score: 0.10159365019000322
+8 threads predict time: 16ms
+Using 9 threads
+Load time: 3714ms
+9 threads training time: 11807ms
+Train score: 0.10159365019000322
+9 threads predict time: 20ms
+Using 10 threads
+Load time: 4026ms
+10 threads training time: 10991ms
+Train score: 0.10159365019000322
+10 threads predict time: 16ms
+Using 11 threads
+Load time: 3672ms
+11 threads training time: 10343ms
+Train score: 0.10159365019000322
+11 threads predict time: 15ms
+Using 12 threads
+Load time: 3561ms
+12 threads training time: 10894ms
+Train score: 0.10159365019000322
+12 threads predict time: 15ms

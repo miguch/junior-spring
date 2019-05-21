@@ -1,0 +1,126 @@
+Pre-codegen
+Ty interner             total           ty region  both
+    Adt               :   3401 35.0%,  0.3%   0.0%  0.0%
+    Array             :    917  9.4%,  0.0%   0.0%  0.0%
+    Slice             :     81  0.8%,  0.0%   0.0%  0.0%
+    RawPtr            :     53  0.5%,  0.0%   0.0%  0.0%
+    Ref               :   3489 35.9%,  0.1%   0.0%  0.0%
+    FnDef             :    576  5.9%,  0.0%   0.0%  0.0%
+    FnPtr             :    250  2.6%,  0.0%   0.0%  0.0%
+    Placeholder       :      0  0.0%,  0.0%   0.0%  0.0%
+    Generator         :      0  0.0%,  0.0%   0.0%  0.0%
+    GeneratorWitness  :      0  0.0%,  0.0%   0.0%  0.0%
+    Dynamic           :     50  0.5%,  0.0%   0.0%  0.0%
+    Closure           :    136  1.4%,  0.1%   0.0%  0.0%
+    Tuple             :    260  2.7%,  0.1%   0.0%  0.0%
+    Bound             :     18  0.2%,  0.0%   0.0%  0.0%
+    Param             :    227  2.3%,  0.0%   0.0%  0.0%
+    Infer             :     48  0.5%,  0.5%   0.0%  0.0%
+    UnnormalizedProjection:      0  0.0%,  0.0%   0.0%  0.0%
+    Projection        :    206  2.1%,  0.0%   0.0%  0.0%
+    Opaque            :      0  0.0%,  0.0%   0.0%  0.0%
+    Foreign           :      0  0.0%,  0.0%   0.0%  0.0%
+                  total   9712         1.1%   0.0%  0.0%
+Substs interner: #9203
+Region interner: #4619
+Stability interner: #21
+Allocation interner: #109
+Layout interner: #9
+Post-codegen
+Ty interner             total           ty region  both
+    Adt               :   6078 16.2%,  0.1%   0.0%  0.0%
+    Array             :   1204  3.2%,  0.0%   0.0%  0.0%
+    Slice             :    100  0.3%,  0.0%   0.0%  0.0%
+    RawPtr            :    592  1.6%,  0.0%   0.0%  0.0%
+    Ref               :   9861 26.2%,  0.0%   0.0%  0.0%
+    FnDef             :  12431 33.0%,  0.0%   0.0%  0.0%
+    FnPtr             :   3213  8.5%,  0.0%   0.0%  0.0%
+    Placeholder       :      0  0.0%,  0.0%   0.0%  0.0%
+    Generator         :      0  0.0%,  0.0%   0.0%  0.0%
+    GeneratorWitness  :      0  0.0%,  0.0%   0.0%  0.0%
+    Dynamic           :     68  0.2%,  0.0%   0.0%  0.0%
+    Closure           :    854  2.3%,  0.0%   0.0%  0.0%
+    Tuple             :    972  2.6%,  0.0%   0.0%  0.0%
+    Bound             :     18  0.0%,  0.0%   0.0%  0.0%
+    Param             :    292  0.8%,  0.0%   0.0%  0.0%
+    Infer             :     48  0.1%,  0.1%   0.0%  0.0%
+    UnnormalizedProjection:      0  0.0%,  0.0%   0.0%  0.0%
+    Projection        :   1897  5.0%,  0.0%   0.0%  0.0%
+    Opaque            :      0  0.0%,  0.0%   0.0%  0.0%
+    Foreign           :      0  0.0%,  0.0%   0.0%  0.0%
+                  total  37628         0.3%   0.0%  0.0%
+Substs interner: #18107
+Region interner: #5294
+Stability interner: #21
+Allocation interner: #528
+Layout interner: #493
+Pre-codegen
+Ty interner             total           ty region  both
+    Adt               :   2652 56.3%,  0.3%   0.0%  0.0%
+    Array             :    463  9.8%,  0.0%   0.0%  0.0%
+    Slice             :     56  1.2%,  0.0%   0.0%  0.0%
+    RawPtr            :     16  0.3%,  0.0%   0.0%  0.0%
+    Ref               :    851 18.1%,  0.1%   0.0%  0.0%
+    FnDef             :    121  2.6%,  0.0%   0.0%  0.0%
+    FnPtr             :    109  2.3%,  0.1%   0.0%  0.0%
+    Placeholder       :      0  0.0%,  0.0%   0.0%  0.0%
+    Generator         :      0  0.0%,  0.0%   0.0%  0.0%
+    GeneratorWitness  :      0  0.0%,  0.0%   0.0%  0.0%
+    Dynamic           :     12  0.3%,  0.0%   0.0%  0.0%
+    Closure           :     35  0.7%,  0.1%   0.0%  0.0%
+    Tuple             :    106  2.3%,  0.3%   0.0%  0.0%
+    Bound             :      9  0.2%,  0.0%   0.0%  0.0%
+    Param             :    204  4.3%,  0.0%   0.0%  0.0%
+    Infer             :     36  0.8%,  0.8%   0.0%  0.0%
+    UnnormalizedProjection:      0  0.0%,  0.0%   0.0%  0.0%
+    Projection        :     40  0.8%,  0.0%   0.0%  0.0%
+    Opaque            :      0  0.0%,  0.0%   0.0%  0.0%
+    Foreign           :      0  0.0%,  0.0%   0.0%  0.0%
+                  total   4710         1.8%   0.0%  0.0%
+Substs interner: #3379
+Region interner: #2168
+Stability interner: #8
+Allocation interner: #55
+Layout interner: #7
+Post-codegen
+Ty interner             total           ty region  both
+    Adt               :   4863 19.3%,  0.1%   0.0%  0.0%
+    Array             :   1033  4.1%,  0.0%   0.0%  0.0%
+    Slice             :     76  0.3%,  0.0%   0.0%  0.0%
+    RawPtr            :    459  1.8%,  0.0%   0.0%  0.0%
+    Ref               :   6133 24.4%,  0.0%   0.0%  0.0%
+    FnDef             :   8157 32.4%,  0.0%   0.0%  0.0%
+    FnPtr             :   1927  7.7%,  0.0%   0.0%  0.0%
+    Placeholder       :      0  0.0%,  0.0%   0.0%  0.0%
+    Generator         :      0  0.0%,  0.0%   0.0%  0.0%
+    GeneratorWitness  :      0  0.0%,  0.0%   0.0%  0.0%
+    Dynamic           :     39  0.2%,  0.0%   0.0%  0.0%
+    Closure           :    504  2.0%,  0.0%   0.0%  0.0%
+    Tuple             :    568  2.3%,  0.1%   0.0%  0.0%
+    Bound             :     12  0.0%,  0.0%   0.0%  0.0%
+    Param             :    282  1.1%,  0.0%   0.0%  0.0%
+    Infer             :     36  0.1%,  0.1%   0.0%  0.0%
+    UnnormalizedProjection:      0  0.0%,  0.0%   0.0%  0.0%
+    Projection        :   1092  4.3%,  0.0%   0.0%  0.0%
+    Opaque            :      0  0.0%,  0.0%   0.0%  0.0%
+    Foreign           :      0  0.0%,  0.0%   0.0%  0.0%
+                  total  25181         0.3%   0.0%  0.0%
+Substs interner: #12529
+Region interner: #3454
+Stability interner: #8
+Allocation interner: #404
+Layout interner: #430
+lr: 0.35000000000000003
+r2: 0.08726005603218301
+lr: 0.35000000000000003
+r2: 0.10627278431241172
+lr: 0.23
+r2: 0.11121925942596944
+lr: 0.2
+r2: 0.11298838584192428
+lr: 0.29
+r2: 0.11542329301342158
+lr: 0.37
+r2: 0.11789635742588589
+lr: 0.39
+r2: 0.12036257732744937
