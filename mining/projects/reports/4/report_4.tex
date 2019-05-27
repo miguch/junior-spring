@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+% Chinese Support
+\usepackage{xeCJK}
+\setCJKmainfont{STSong}
+% \setmainfont{Times New Roman}
+
+\usepackage{float}
+
+% for symbol
+\usepackage{gensymb}
+% matrix
+\usepackage{amsmath}
+
+% For images
+\usepackage{graphicx}
+\graphicspath{ {./screenshoot/} }
+
+\newcommand{\numpy}{{\tt numpy}}    % tt font for numpy
+
+\topmargin -1.in
+\textheight 9in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\textwidth 7in
+
+
+\usepackage{listings}
+\usepackage{color}
+\usepackage{xcolor}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{textblue}{rgb}{.2,.2,.7}
+\definecolor{textred}{rgb}{0.77,0,0}
+\definecolor{textgreen}{rgb}{0,0.43,0}
+
+% \setmonofont{FiraCode-Regular}
+\lstset{frame=tb,
+  language=C++,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue}\itshape,
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  commentstyle=\color{textred}\itshape,
+  tabsize=3
+}
+
+
+
+% Content start below
+\begin{document}
+
+\author{陈铭涛\\16340024}
+\title{数据挖掘周报 4}
+% \date{\vspace{-5ex}}
+\maketitle
+
+\medskip
+
+% ========== Begin answering questions here
+
+\section{这两周所做工作}
+\begin{enumerate}
+    \item 学习数据挖掘中的机器学习算法原理，学习了决策树、集成方法的实现和调参方法，了解了文本处理中 RNN、LSTM 神经网络的原理和在 PyTorch 下的具体使用。
+    \item 学习了 TalkingData Mobile User Demographics 比赛中的 Kernel，了解其特征工程，构建训练特征集以及模型选择的思路，比如使用 TfIdf 等 NLP 中的方法来处理手机品牌的数据，在华为比赛中也可以用于处理应用类型等类似的字段。
+    \item 查看了华为算法精英赛的「用户人口属性预测」比赛的比赛内容和数据
+\end{enumerate}
+
+\section{遇到的问题}
+\begin{enumerate}
+    \item 华为比赛中数据量较大，有一个 25.66G 的表，使用时不能全部加载入内存，目前只在忽略该表的前提下进行比赛。
+\end{enumerate}
+
+
+\section{下一阶段计划}
+
+\begin{enumerate}
+    \item 参加华为比赛，继续学习 TalkingData Mobile User Demographics 比赛中不同的 Kernel 做法。
+\end{enumerate}
+
+\end{document}
+\grid
+\grid

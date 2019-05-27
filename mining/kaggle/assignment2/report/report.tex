@@ -150,6 +150,13 @@ CART 包含了分类决策树和回归决策树的算法，
 
 \section{Gradient Boosting}
 
+使用的损失函数为均方误差：
+\begin{equation}
+    \begin{aligned}
+    L= \frac{1}{N}\sum_{u=1}^{n}(Y_i - \hat{Y_i})
+    \end{aligned}
+\end{equation}
+
 \section{Random Forest}
 
 \section{代码实现}
@@ -168,6 +175,19 @@ CART 包含了分类决策树和回归决策树的算法，
     \item log: 程序日志
     \item pretty\_env\_logger: 程序日志输出
     \item num\_cpus: 获取系统 CPU 核心数量
+    \item serde: 提供将结构体变量序列化的功能
+    \item serde\_json: 用于以 json 格式将序列化后的模型变量保存至文件
+\end{enumerate}
+
+项目中包括的主要代码文件如下
+\begin{enumerate}
+    \item[$\bullet$] data\_frame.rs: 使用一个二维的 \lstinline{ndarray} 作为程序使用的 \lstinline{DataFrame} 类型，并定义了类型别名\lstinline{V} 作为数据的存储类型，默认为 \lstinline{f64}, 此外还包含了 csv 文件读写等其他实用函数
+    \item[$\bullet$] learner.rs: 定义了一个 \lstinline{Learner} trait，包括了类似于 sklearn 的\lstinline{fit} 和\lstinline{predict} 两个方法，决策树，Boosting和 Random Forest 都需实现该 trait。
+    \item[$\bullet$] tree.rs: 包括了 \lstinline{DecisionTree}类型，实现了 CART 算法，可对单个决策树进行训练和预测。
+    \item[$\bullet$] boosting.rs: 包括了\lstinline{GradientBoosting} 类型的定义与训练和预测的实现。
+    \item[$\bullet$] random\_forest.rs: 包括了\lstinline{RandomForest} 类型的定义与训练和预测的实现。
+    \item[$\bullet$] utils 目录：包括了数个实用功能，如获取数据列排序序列，交叉验证，模型分数计算等。
+
 \end{enumerate}
 
 \section{并行化表现}
@@ -180,7 +200,7 @@ CART 包含了分类决策树和回归决策树的算法，
 
 \begin{equation}
     \begin{aligned}
-    \overline{y}= \frac{1}{n}\sum_{i=1}^n y_i,\\
+    \bar{y}= \frac{1}{n}\sum_{i=1}^n y_i,\\
     SS_{tot} = \sum_i(y_i-\overline{y})^2,\\
     SS_{res} = \sum_i(y_i-f_i)^2,\\
     R^2 = 1 - \frac{SS_{res}}{SS_{tot}}
@@ -294,6 +314,14 @@ CART 包含了分类决策树和回归决策树的算法，
     \centering
     \includegraphics[scale=0.5]{gbdt-fixed-lr-kaggle.png}
     \caption{lr=0.25, GBDT}
+    \label{}
+\end{figure}
+
+使用 Random Forest, 不限制单棵决策树生长，使用决策树总数为350，时的分数为0.17210：
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{RF-400-4-005-350.png}
+    \caption{随机森林}
     \label{}
 \end{figure}
 
