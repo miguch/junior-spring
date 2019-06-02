@@ -1,0 +1,278 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#"
+     xml:base="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-13="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#位于 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#位于"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#大学 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#大学"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#学院 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#学院">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#校园"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#校区 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#校区">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#大学"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#校园 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#校园">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#大学"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#中山大学 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#中山大学">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#大学"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#光华口腔 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#光华口腔">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#学院"/>
+        <位于 rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#广州北校园"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#农学院 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#农学院">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#学院"/>
+        <位于 rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#深圳校区"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#医学院 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#医学院">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#学院"/>
+        <位于 rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#广州北校园"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#博雅学院 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#博雅学院">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#学院"/>
+        <位于 rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#广州南校园"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#历史学系 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#历史学系">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#学院"/>
+        <位于 rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#广州南校园"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#国际关系学院 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#国际关系学院">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#学院"/>
+        <位于 rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#珠海校区"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#土木工程学院 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#土木工程学院">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#学院"/>
+        <位于 rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#珠海校区"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#广州东校园 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#广州东校园">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#校园"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#广州北校园 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#广州北校园">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#校园"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#广州南校园 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#广州南校园">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#校园"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#广州校区 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#广州校区">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#校区"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#护理学院 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#护理学院">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#学院"/>
+        <位于 rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#广州北校园"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#数学学院 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#数学学院">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#学院"/>
+        <位于 rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#广州南校园"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#数据科学与计算机学院 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#数据科学与计算机学院">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#学院"/>
+        <位于 rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#广州东校园"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#旅游学院 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#旅游学院">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#学院"/>
+        <位于 rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#珠海校区"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#智能工程学院 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#智能工程学院">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#学院"/>
+        <位于 rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#深圳校区"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#材料学院 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#材料学院">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#学院"/>
+        <位于 rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#深圳校区"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#法学院 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#法学院">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#学院"/>
+        <位于 rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#广州东校园"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#深圳校区 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#深圳校区">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#校区"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#校园"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#珠海校区 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#珠海校区">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#校区"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#校园"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#管理学院 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#管理学院">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#学院"/>
+        <位于 rdf:resource="http://www.semanticweb.org/mig/ontologies/2019/4/untitled-ontology-13#广州东校园"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

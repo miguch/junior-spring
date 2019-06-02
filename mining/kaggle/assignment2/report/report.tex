@@ -128,7 +128,9 @@
   commentstyle=\color{textred}\itshape,
   tabsize=3
 }
-
+\usepackage{indentfirst}
+\usepackage{bm}
+\usepackage[ruled]{algorithm2e}
 
 
 % Content start below
@@ -146,23 +148,80 @@
 
 \section{CART 算法}
 
-CART 包含了分类决策树和回归决策树的算法，
+决策树是一种树结构，每一个非叶子节点表示一个对一个特征的分裂，叶子节点存放了分类问题中的类别和回归问题中的数值。
+其对样本进行预测的方法是从根节点开始，根据每一个分支节点的特征属性，决定输出方向直到到达叶子节点，将叶子节点的数值作为输出值。
+
+决策树的优点为决策过程较为容易令人理解，可解释性强。决策树的构造方法包括了 ID3, C4.5等算法，在本次项目中主要实现的是 CART 算法。
+
+CART 包含了分类决策树和回归决策树的算法，本次实现了其中的回归树算法。CART 构造出的决策树为一棵二叉树。对于分类问题，CART 算法通过 Gini Index 来计算数据集的纯度，以决定一个节点的分裂，其公式如下：
+
+假设样本集合$D$中第$k$类样本比例为$p_k$($k=1,2...|N|$),
+\begin{equation}
+    \begin{aligned}
+    Gini(D)=1-\sum_{k=1}^{|N|}p_k^2
+    \end{aligned}
+\end{equation}
+
+$Gini(D)$反映了从$D$中随机抽取两个样本其类别不同的概率，越小则代表样本纯度越高。对于属性集合$A$上的属性$a$，将所有$D$上取值为$a^v$的样本记为$D^v$，则$a$上的Gini Index为：
+\begin{equation}
+    Gini(D, a)=\sum_{v=1}^{|V|}\frac{|D^v|}{|D|}Gini(D^v)
+\end{equation}
+选择$A$中的划分点即为
+\begin{equation}
+    a_*=\mathop{\arg\min}_{a\in A}Gini(D,a)
+\end{equation}
+
+当要解决的问题是回归问题时，假设样本集合$D$中第$i$个样本的标签为$y_i$，则最小化的目标为回归标签的平方误差和，即
+\begin{equation}
+    SSE(D)=\sum_{i=1}^{|N|}(y_i-\overline{y})^2
+\end{equation}
+
+对于在属性$a$上的$v$值分裂的节点，设其左子树和右子树上的样本集合分别为$D^L$, $D^R$, 则其平方误差和为：
+\begin{equation}
+    SSE(D, a, v)=SSE(D^L) + SSE(D^R)
+\end{equation}
+
+则对于属性$a$上的划分点的选择为：
+\begin{equation}
+    a_*=\mathop{\arg\min}_{a\in A, v \in V}SSE(D,a,v)
+\end{equation}
+
+CART 算法进行决策树构建的方法如下：
+
+\begin{algorithm}[H]
+    \SetAlgoLined
+    \KwResult{分类决策树或回归决策树 }
+    从深度为0开始构建\;
+    对各特征列进行排序\;
+
+    \While{未达到终止条件}{
+      instructions\;
+      \eIf{condition}{
+       instructions1\;
+       instructions2\;
+       }{
+       instructions3\;
+      }
+     }
+     \caption{CART 决策树构建}
+\end{algorithm}
+
+由于对于连续变量的特征，$|V|$可能是一个较大的数值
 
 \section{Gradient Boosting}
 
 使用的损失函数为均方误差：
 \begin{equation}
     \begin{aligned}
-    L= \frac{1}{N}\sum_{u=1}^{n}(Y_i - \hat{Y_i})
+    L= \frac{1}{N}\sum_{u=1}^{n}(Y_i - \hat{Y_i})\\
     \end{aligned}
 \end{equation}
 
 \section{Random Forest}
 
 \section{代码实现}
-\paragraph{}
 
-出于内存和并行化实现的考虑，本次项目选择了使用 Rust 语言实现，Rust 的 RAII 机制使得临时资源可以及时地释放，提升内存利用率，由编译器提供的静态检查可以避免多线程时线程不安全的情况，降低 debug 难度。
+出于内存、速度和并行化实现的考虑，本次项目选择了使用 Rust 语言实现，原因是 Rust 的 RAII 机制使得资源可以及时地释放，提升内存利用率；由编译器提供的静态检查可以避免多线程时线程不安全的情况，降低 debug 难度；作为通过 LLVM 后端编译为机器代码的静态语言 Rust 可以在相同的实现下获得比 Python 更高的速度。使用的编译器版本为\lstinline{rustc 1.35.0}.
 
 程序实现中使用的第三方库如下：
 \begin{enumerate}
@@ -181,16 +240,59 @@ CART 包含了分类决策树和回归决策树的算法，
 
 项目中包括的主要代码文件如下
 \begin{enumerate}
-    \item[$\bullet$] data\_frame.rs: 使用一个二维的 \lstinline{ndarray} 作为程序使用的 \lstinline{DataFrame} 类型，并定义了类型别名\lstinline{V} 作为数据的存储类型，默认为 \lstinline{f64}, 此外还包含了 csv 文件读写等其他实用函数
+    \item[$\bullet$] data\_frame.rs: 使用一个二维的 \lstinline{ndarray} 作为程序使用的 \lstinline{DataFrame} 类型，并定义了类型别名\lstinline{V} 作为全局的数据存储类型，可设为 \lstinline{f64} 或 \lstinline{f32}, 此外还包含了 csv 文件读写等其他实用函数
     \item[$\bullet$] learner.rs: 定义了一个 \lstinline{Learner} trait，包括了类似于 sklearn 的\lstinline{fit} 和\lstinline{predict} 两个方法，决策树，Boosting和 Random Forest 都需实现该 trait。
     \item[$\bullet$] tree.rs: 包括了 \lstinline{DecisionTree}类型，实现了 CART 算法，可对单个决策树进行训练和预测。
     \item[$\bullet$] boosting.rs: 包括了\lstinline{GradientBoosting} 类型的定义与训练和预测的实现。
     \item[$\bullet$] random\_forest.rs: 包括了\lstinline{RandomForest} 类型的定义与训练和预测的实现。
     \item[$\bullet$] utils 目录：包括了数个实用功能，如获取数据列排序序列，交叉验证，模型分数计算等。
-
 \end{enumerate}
 
+bin 目录下的包含 main 函数的代码文件如下：
+\begin{enumerate}
+    \item[$\bullet$] boost\_cv.rs：使用 GDBT 进行交叉验证
+    \item[$\bullet$] boost\_predict.rs：使用 GDBT 进行训练并输出在测试集上的预测结果
+    \item[$\bullet$] cv.rs：使用单棵决策树进行交叉验证
+    \item[$\bullet$] parallel\_performance.rs：接收一个命令行整数作为程序最多使用的线程数，进行一次单棵决策树的训练，用于测试并行化的效率
+    \item[$\bullet$] predict.rs：使用单棵决策树进行训练并输出测试集预测结果
+    \item[$\bullet$] rf\_cv.rs：使用随机森林进行交叉验证
+    \item[$\bullet$] rf\_predict.rs：使用随机森林进行训练并输出测试集预测结果
+\end{enumerate}
+
+运行任一 bin 目录下的代码的方法为在项目目录下执行命令（*nix系统下），其中\lstinline{EMTM_LOG=info}的作用是使程序将日志输出到命令行：
+\begin{lstlisting}
+EMTM_LOG=info cargo run --release --bin {EXEC_NAME}
+\end{lstlisting}
+
+所有代码都需在 release 模式下进行编译，否则速度可能会有20到100倍的减慢。
+
+
 \section{并行化表现}
+
+由于并行化的实现主要位于单棵决策树的训练中，对于并行化表现的测试主要针对单棵决策树的训练与预测。
+
+在命令行下使用如下命令测试了从单线程到12线程下对单棵决策树训练时的时间：
+\begin{lstlisting}
+for ((i = 1; i<=12;i++)) cargo run --release --bin parallel_performance $i >>../threads_performance.txt
+\end{lstlisting}
+
+将获得的训练速度相对单线程下训练速度的提升数据进行绘图如下：
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.35]{train_time_speedup.png}
+    \caption{并行训练速度提升情况}
+    \label{}
+\end{figure}
+
+预测速度的数据进行绘图如下：
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.35]{test_time_speedup.png}
+    \caption{并行预测速度提升情况}
+    \label{}
+\end{figure}
+
+可见当线程数提升到一定程度下对训练速度的提升大约收敛在 4 倍，而对预测速度的提升不大。
 
 \section{验证}
 以下程序测试均在一台搭载6核12线程 CPU，运行 macOS 系统的笔记本电脑上运行。
@@ -290,7 +392,7 @@ CART 包含了分类决策树和回归决策树的算法，
         \label{}
     \end{figure}
 
-    \item Random Forest: 2.1G
+    \item Random Forest: 1.6G
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.44]{rf-memory.png}
