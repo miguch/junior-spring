@@ -192,21 +192,32 @@ CART 算法进行决策树构建的方法如下：
     \SetAlgoLined
     \KwResult{分类决策树或回归决策树 }
     从深度为0开始构建\;
-    对各特征列进行排序\;
+    对各连续特征列进行排序\;
 
     \While{未达到终止条件}{
-      instructions\;
-      \eIf{condition}{
-       instructions1\;
-       instructions2\;
-       }{
-       instructions3\;
-      }
-     }
-     \caption{CART 决策树构建}
+        \uIf{特征为连续特征}{
+            从排序好的特征列中对每一个取值进行评判标准的计算\;
+            选取令评判标准最小的取值作为分裂点\;
+        }
+        \uElseIf{特征为类别特征}{
+            从样本中选取令评判标准最小的类别进行分裂\;
+        }
+        根据分裂点创建新的决策树节点
+    }
+    \caption{CART 决策树构建}
 \end{algorithm}
 
-由于对于连续变量的特征，$|V|$可能是一个较大的数值
+其中的终止条件如下：
+\begin{enumerate}
+    \item 若节点中的所有样本的标签值均相同
+    \item 若树的深度已达到用户定义的\lstinline{MaxDepth}数值
+    \item 若节点的样本数少于用户定义的\lstinline{MinSamplesSplit}数值
+    \item 若节点的分裂生成的子节点样本数少于用户定义的\lstinline{MinSamplesLeaf}数值
+\end{enumerate}
+
+在实现中，由于本次项目的数据特征均为连续特征，只实现了在连续特征下的回归决策树构建。
+
+由于对于连续变量的特征，$|V|$可能是一个较大的数值，此时对连续变量的每一个不同值进行扫描的计算代价非常大，因此实现中添加了\lstinline{MaxBin}参数，在寻找分裂点时程序将会将特征列分为对应的段数，每段仅测试一个分裂点。将该参数调大可以提升训练结果，但是会增加训练时间。
 
 \section{Gradient Boosting}
 
@@ -221,7 +232,7 @@ CART 算法进行决策树构建的方法如下：
 
 \section{代码实现}
 
-出于内存、速度和并行化实现的考虑，本次项目选择了使用 Rust 语言实现，原因是 Rust 的 RAII 机制使得资源可以及时地释放，提升内存利用率；由编译器提供的静态检查可以避免多线程时线程不安全的情况，降低 debug 难度；作为通过 LLVM 后端编译为机器代码的静态语言 Rust 可以在相同的实现下获得比 Python 更高的速度。使用的编译器版本为\lstinline{rustc 1.35.0}.
+出于内存、速度和并行化实现的考虑，本次项目选择了使用 Rust 语言实现，原因是 Rust 的 RAII 机制使得资源可以及时地释放，提升内存利用率；由编译器提供的静态检查可以避免多线程时线程不安全的情况，降低 debug 难度；作为通过 LLVM 后端编译为机器代码的静态语言 Rust 可以在相同的实现下获得比 Python 等语言更高的速度。使用的编译器版本为\lstinline{rustc 1.35.0}.
 
 程序实现中使用的第三方库如下：
 \begin{enumerate}
@@ -258,6 +269,8 @@ bin 目录下的包含 main 函数的代码文件如下：
     \item[$\bullet$] rf\_cv.rs：使用随机森林进行交叉验证
     \item[$\bullet$] rf\_predict.rs：使用随机森林进行训练并输出测试集预测结果
 \end{enumerate}
+
+程序运行前需将训练数据放置在项目上层目录下的 data 文件夹下。
 
 运行任一 bin 目录下的代码的方法为在项目目录下执行命令（*nix系统下），其中\lstinline{EMTM_LOG=info}的作用是使程序将日志输出到命令行：
 \begin{lstlisting}
@@ -312,7 +325,7 @@ for ((i = 1; i<=12;i++)) cargo run --release --bin parallel_performance $i >>../
 其中$y_i$为第$i$个样本的实际观察值，$f_i$为第$i$个样本的模型预测值。$R^2$的取值通常在0与1之间，越接近1代表预测值与真实值匹配程度越高。
 
 
-使用 \lstinline{LightGBM} 默认参数构建一个模型运行3折交叉验证进行对比：
+使用 \lstinline{LightGBM}  构建一个模型运行3折交叉验证进行对比：
 
 \begin{figure}[H]
     \centering
@@ -353,11 +366,11 @@ for ((i = 1; i<=12;i++)) cargo run --release --bin parallel_performance $i >>../
 
 使用 Random Forest 训练，决策树数量为150，不限制决策树生长深度，进行交叉验证获得的结果如下：
 
-在训练集上获得的平均$R^2$分数为0.1496125066152948
+在训练集上获得的平均$R^2$分数为0.15712251333333332
 
-在验证集上获得的平均$R^2$分数为0.14889900127096856
+在验证集上获得的平均$R^2$分数为0.15363599666666664
 
-训练时间平均为 444804 ms.
+训练时间平均为 1355728 ms.
 
 \begin{figure}[H]
     \centering

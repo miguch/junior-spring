@@ -1,0 +1,370 @@
+@prefix map: <#> .
+@prefix db: <> .
+@prefix vocab: <vocab/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix jdbc: <http://d2rq.org/terms/jdbc/> .
+
+map:database a d2rq:Database;
+	d2rq:jdbcDriver "com.mysql.jdbc.Driver";
+	d2rq:jdbcDSN "jdbc:mysql://127.0.0.1:9877/EMTM_TEST";
+	d2rq:username "root";
+	d2rq:password "ROOT_PASSWORD";
+	jdbc:autoReconnect "true";
+	jdbc:zeroDateTimeBehavior "convertToNull";
+	.
+
+# Table __diesel_schema_migrations
+map:__diesel_schema_migrations a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "__diesel_schema_migrations/@@__diesel_schema_migrations.version|urlify@@";
+	d2rq:class vocab:__diesel_schema_migrations;
+	d2rq:classDefinitionLabel "__diesel_schema_migrations";
+	.
+map:__diesel_schema_migrations__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:__diesel_schema_migrations;
+	d2rq:property rdfs:label;
+	d2rq:pattern "__diesel_schema_migrations #@@__diesel_schema_migrations.version@@";
+	.
+map:__diesel_schema_migrations_version a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:__diesel_schema_migrations;
+	d2rq:property vocab:__diesel_schema_migrations_version;
+	d2rq:propertyDefinitionLabel "__diesel_schema_migrations version";
+	d2rq:column "__diesel_schema_migrations.version";
+	.
+map:__diesel_schema_migrations_run_on a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:__diesel_schema_migrations;
+	d2rq:property vocab:__diesel_schema_migrations_run_on;
+	d2rq:propertyDefinitionLabel "__diesel_schema_migrations run_on";
+	d2rq:column "__diesel_schema_migrations.run_on";
+	d2rq:datatype xsd:dateTime;
+	.
+
+# Table emtm_cows
+map:emtm_cows a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "emtm_cows/@@emtm_cows.uid@@";
+	d2rq:class vocab:emtm_cows;
+	d2rq:classDefinitionLabel "emtm_cows";
+	.
+map:emtm_cows__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_cows;
+	d2rq:property rdfs:label;
+	d2rq:pattern "emtm_cows #@@emtm_cows.uid@@";
+	.
+map:emtm_cows_company a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_cows;
+	d2rq:property vocab:emtm_cows_company;
+	d2rq:propertyDefinitionLabel "emtm_cows company";
+	d2rq:column "emtm_cows.company";
+	.
+map:emtm_cows_uid__ref a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_cows;
+	d2rq:property vocab:emtm_cows_uid;
+	d2rq:refersToClassMap map:emtm_users;
+	d2rq:join "emtm_cows.uid => emtm_users.uid";
+	.
+
+# Table emtm_missions
+map:emtm_missions a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "emtm_missions/@@emtm_missions.mid@@";
+	d2rq:class vocab:emtm_missions;
+	d2rq:classDefinitionLabel "emtm_missions";
+	.
+map:emtm_missions__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_missions;
+	d2rq:property rdfs:label;
+	d2rq:pattern "emtm_missions #@@emtm_missions.mid@@";
+	.
+map:emtm_missions_mid a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_missions;
+	d2rq:property vocab:emtm_missions_mid;
+	d2rq:propertyDefinitionLabel "emtm_missions mid";
+	d2rq:column "emtm_missions.mid";
+	d2rq:datatype xsd:integer;
+	.
+map:emtm_missions_bounty a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_missions;
+	d2rq:property vocab:emtm_missions_bounty;
+	d2rq:propertyDefinitionLabel "emtm_missions bounty";
+	d2rq:column "emtm_missions.bounty";
+	d2rq:datatype xsd:integer;
+	.
+map:emtm_missions_risk a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_missions;
+	d2rq:property vocab:emtm_missions_risk;
+	d2rq:propertyDefinitionLabel "emtm_missions risk";
+	d2rq:column "emtm_missions.risk";
+	d2rq:datatype xsd:integer;
+	.
+map:emtm_missions_name a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_missions;
+	d2rq:property vocab:emtm_missions_name;
+	d2rq:propertyDefinitionLabel "emtm_missions name";
+	d2rq:column "emtm_missions.name";
+	.
+map:emtm_missions_mission_type a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_missions;
+	d2rq:property vocab:emtm_missions_mission_type;
+	d2rq:propertyDefinitionLabel "emtm_missions mission_type";
+	d2rq:column "emtm_missions.mission_type";
+	d2rq:datatype xsd:integer;
+	.
+map:emtm_missions_content a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_missions;
+	d2rq:property vocab:emtm_missions_content;
+	d2rq:propertyDefinitionLabel "emtm_missions content";
+	d2rq:column "emtm_missions.content";
+	.
+map:emtm_missions_post_time a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_missions;
+	d2rq:property vocab:emtm_missions_post_time;
+	d2rq:propertyDefinitionLabel "emtm_missions post_time";
+	d2rq:column "emtm_missions.post_time";
+	d2rq:datatype xsd:dateTime;
+	.
+map:emtm_missions_deadline a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_missions;
+	d2rq:property vocab:emtm_missions_deadline;
+	d2rq:propertyDefinitionLabel "emtm_missions deadline";
+	d2rq:column "emtm_missions.deadline";
+	d2rq:datatype xsd:dateTime;
+	.
+map:emtm_missions_max_participants a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_missions;
+	d2rq:property vocab:emtm_missions_max_participants;
+	d2rq:propertyDefinitionLabel "emtm_missions max_participants";
+	d2rq:column "emtm_missions.max_participants";
+	d2rq:datatype xsd:integer;
+	.
+map:emtm_missions_min_grade a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_missions;
+	d2rq:property vocab:emtm_missions_min_grade;
+	d2rq:propertyDefinitionLabel "emtm_missions min_grade";
+	d2rq:column "emtm_missions.min_grade";
+	d2rq:datatype xsd:integer;
+	.
+map:emtm_missions_max_grade a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_missions;
+	d2rq:property vocab:emtm_missions_max_grade;
+	d2rq:propertyDefinitionLabel "emtm_missions max_grade";
+	d2rq:column "emtm_missions.max_grade";
+	d2rq:datatype xsd:integer;
+	.
+map:emtm_missions_min_finished a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_missions;
+	d2rq:property vocab:emtm_missions_min_finished;
+	d2rq:propertyDefinitionLabel "emtm_missions min_finished";
+	d2rq:column "emtm_missions.min_finished";
+	d2rq:datatype xsd:integer;
+	.
+map:emtm_missions_school__ref a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_missions;
+	d2rq:property vocab:emtm_missions_school;
+	d2rq:refersToClassMap map:school_zh;
+	d2rq:join "emtm_missions.school => school_zh.school_id";
+	.
+map:emtm_missions_poster_uid__ref a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_missions;
+	d2rq:property vocab:emtm_missions_poster_uid;
+	d2rq:refersToClassMap map:emtm_users;
+	d2rq:join "emtm_missions.poster_uid => emtm_users.uid";
+	.
+
+# Table emtm_participants
+map:emtm_participants a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "emtm_participants/@@emtm_participants.mid@@/@@emtm_participants.student_uid@@";
+	d2rq:class vocab:emtm_participants;
+	d2rq:classDefinitionLabel "emtm_participants";
+	.
+map:emtm_participants__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_participants;
+	d2rq:property rdfs:label;
+	d2rq:pattern "emtm_participants #@@emtm_participants.mid@@/@@emtm_participants.student_uid@@";
+	.
+map:emtm_participants_state a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_participants;
+	d2rq:property vocab:emtm_participants_state;
+	d2rq:propertyDefinitionLabel "emtm_participants state";
+	d2rq:column "emtm_participants.state";
+	d2rq:datatype xsd:integer;
+	.
+map:emtm_participants_mid__ref a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_participants;
+	d2rq:property vocab:emtm_participants_mid;
+	d2rq:refersToClassMap map:emtm_missions;
+	d2rq:join "emtm_participants.mid => emtm_missions.mid";
+	.
+map:emtm_participants_student_uid__ref a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_participants;
+	d2rq:property vocab:emtm_participants_student_uid;
+	d2rq:refersToClassMap map:emtm_students;
+	d2rq:join "emtm_participants.student_uid => emtm_students.uid";
+	.
+
+# Table emtm_students
+map:emtm_students a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "emtm_students/@@emtm_students.uid@@";
+	d2rq:class vocab:emtm_students;
+	d2rq:classDefinitionLabel "emtm_students";
+	.
+map:emtm_students__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_students;
+	d2rq:property rdfs:label;
+	d2rq:pattern "emtm_students #@@emtm_students.uid@@";
+	.
+map:emtm_students_student_id a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_students;
+	d2rq:property vocab:emtm_students_student_id;
+	d2rq:propertyDefinitionLabel "emtm_students student_id";
+	d2rq:column "emtm_students.student_id";
+	.
+map:emtm_students_credit a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_students;
+	d2rq:property vocab:emtm_students_credit;
+	d2rq:propertyDefinitionLabel "emtm_students credit";
+	d2rq:column "emtm_students.credit";
+	d2rq:datatype xsd:integer;
+	.
+map:emtm_students_accepted a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_students;
+	d2rq:property vocab:emtm_students_accepted;
+	d2rq:propertyDefinitionLabel "emtm_students accepted";
+	d2rq:column "emtm_students.accepted";
+	d2rq:datatype xsd:integer;
+	.
+map:emtm_students_finished a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_students;
+	d2rq:property vocab:emtm_students_finished;
+	d2rq:propertyDefinitionLabel "emtm_students finished";
+	d2rq:column "emtm_students.finished";
+	d2rq:datatype xsd:integer;
+	.
+map:emtm_students_major a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_students;
+	d2rq:property vocab:emtm_students_major;
+	d2rq:propertyDefinitionLabel "emtm_students major";
+	d2rq:column "emtm_students.major";
+	.
+map:emtm_students_year a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_students;
+	d2rq:property vocab:emtm_students_year;
+	d2rq:propertyDefinitionLabel "emtm_students year";
+	d2rq:column "emtm_students.year";
+	d2rq:datatype xsd:integer;
+	.
+map:emtm_students_uid__ref a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_students;
+	d2rq:property vocab:emtm_students_uid;
+	d2rq:refersToClassMap map:emtm_users;
+	d2rq:join "emtm_students.uid => emtm_users.uid";
+	.
+map:emtm_students_school_id__ref a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_students;
+	d2rq:property vocab:emtm_students_school_id;
+	d2rq:refersToClassMap map:school_zh;
+	d2rq:join "emtm_students.school_id => school_zh.school_id";
+	.
+
+# Table emtm_users
+map:emtm_users a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "emtm_users/@@emtm_users.uid@@";
+	d2rq:class vocab:emtm_users;
+	d2rq:classDefinitionLabel "emtm_users";
+	.
+map:emtm_users__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_users;
+	d2rq:property rdfs:label;
+	d2rq:pattern "emtm_users #@@emtm_users.uid@@";
+	.
+map:emtm_users_uid a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_users;
+	d2rq:property vocab:emtm_users_uid;
+	d2rq:propertyDefinitionLabel "emtm_users uid";
+	d2rq:column "emtm_users.uid";
+	d2rq:datatype xsd:integer;
+	.
+map:emtm_users_wechat_id a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_users;
+	d2rq:property vocab:emtm_users_wechat_id;
+	d2rq:propertyDefinitionLabel "emtm_users wechat_id";
+	d2rq:column "emtm_users.wechat_id";
+	.
+map:emtm_users_phone a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_users;
+	d2rq:property vocab:emtm_users_phone;
+	d2rq:propertyDefinitionLabel "emtm_users phone";
+	d2rq:column "emtm_users.phone";
+	.
+map:emtm_users_personal_info a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_users;
+	d2rq:property vocab:emtm_users_personal_info;
+	d2rq:propertyDefinitionLabel "emtm_users personal_info";
+	d2rq:column "emtm_users.personal_info";
+	.
+map:emtm_users_email a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_users;
+	d2rq:property vocab:emtm_users_email;
+	d2rq:propertyDefinitionLabel "emtm_users email";
+	d2rq:column "emtm_users.email";
+	.
+map:emtm_users_username a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_users;
+	d2rq:property vocab:emtm_users_username;
+	d2rq:propertyDefinitionLabel "emtm_users username";
+	d2rq:column "emtm_users.username";
+	.
+map:emtm_users_verified a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_users;
+	d2rq:property vocab:emtm_users_verified;
+	d2rq:propertyDefinitionLabel "emtm_users verified";
+	d2rq:column "emtm_users.verified";
+	d2rq:datatype xsd:boolean;
+	.
+map:emtm_users_tokens a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_users;
+	d2rq:property vocab:emtm_users_tokens;
+	d2rq:propertyDefinitionLabel "emtm_users tokens";
+	d2rq:column "emtm_users.tokens";
+	d2rq:datatype xsd:integer;
+	.
+map:emtm_users_user_type a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:emtm_users;
+	d2rq:property vocab:emtm_users_user_type;
+	d2rq:propertyDefinitionLabel "emtm_users user_type";
+	d2rq:column "emtm_users.user_type";
+	d2rq:datatype xsd:integer;
+	.
+
+# Table school_zh
+map:school_zh a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "school_zh/@@school_zh.school_id@@";
+	d2rq:class vocab:school_zh;
+	d2rq:classDefinitionLabel "school_zh";
+	.
+map:school_zh__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:school_zh;
+	d2rq:property rdfs:label;
+	d2rq:pattern "school_zh #@@school_zh.school_id@@";
+	.
+map:school_zh_school_id a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:school_zh;
+	d2rq:property vocab:school_zh_school_id;
+	d2rq:propertyDefinitionLabel "school_zh school_id";
+	d2rq:column "school_zh.school_id";
+	d2rq:datatype xsd:integer;
+	.
+map:school_zh_school_name a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:school_zh;
+	d2rq:property vocab:school_zh_school_name;
+	d2rq:propertyDefinitionLabel "school_zh school_name";
+	d2rq:column "school_zh.school_name";
+	.
+

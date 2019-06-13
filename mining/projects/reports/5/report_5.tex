@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+% Chinese Support
+\usepackage{xeCJK}
+\setCJKmainfont{STSong}
+% \setmainfont{Times New Roman}
+
+\usepackage{float}
+
+% for symbol
+\usepackage{gensymb}
+% matrix
+\usepackage{amsmath}
+
+% For images
+\usepackage{graphicx}
+\graphicspath{ {./screenshoot/} }
+
+\newcommand{\numpy}{{\tt numpy}}    % tt font for numpy
+
+\topmargin -1.in
+\textheight 9in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\textwidth 7in
+
+
+\usepackage{listings}
+\usepackage{color}
+\usepackage{xcolor}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{textblue}{rgb}{.2,.2,.7}
+\definecolor{textred}{rgb}{0.77,0,0}
+\definecolor{textgreen}{rgb}{0,0.43,0}
+
+% \setmonofont{FiraCode-Regular}
+\lstset{frame=tb,
+  language=C++,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue}\itshape,
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  commentstyle=\color{textred}\itshape,
+  tabsize=3
+}
+
+
+
+% Content start below
+\begin{document}
+
+\author{陈铭涛\\16340024}
+\title{数据挖掘周报 5}
+% \date{\vspace{-5ex}}
+\maketitle
+
+\medskip
+
+% ========== Begin answering questions here
+
+\section{这两周所做工作}
+\begin{enumerate}
+    \item 参与华为算法精英赛，写周报的时候分数为0.536285，排名40.
+    \item 对比赛中各表的处理如下：
+    \begin{enumerate}
+        \item {\bf user\_basic\_info}: 对'city', 'prodName', 'color', 'carrier'这四个特征使用\lstinline{LabelEncoder}进行编码，并对 ct 特征进行 one-hot 编码
+        \item {\bf user\_app\_actived 和 app\_info}: 将用户使用的应用转为应用类型然后使用词袋模型进行处理获取与用户使用的应用类型相关的特征
+        \item {\bf user\_app\_usage}: 数据较大，使用另一个程序处理为用户对各类应用的使用次数与时间后保存在\lstinline{usage_summary}表中
+        \item {\bf user\_behavior\_info}: 未作处理，直接用于训练
+    \end{enumerate}
+    将以上处理后的各表合并后用于进行模型训练
+
+    \item 使用的模型为 LightGBM, 经过调参后进行3折交叉验证时在验证集上的正确率为0.531126。
+\end{enumerate}
+
+\section{遇到的问题}
+\begin{enumerate}
+    \item 在 Jupyter Notebook 中对user\_app\_usage表进行处理的时候速度每秒只能处理 7000 条记录，全部处理完需要20多个小时，且内存占用很大。因此后来使用 Rust 重新编写了进行处理的程序，每秒可处理超过一百万条记录，10分钟内可以生成输出的\lstinline{usage_summary}表。
+    \item pandas在运行过程中有着非常大的内存占用，且很多操作即使加入\lstinline{inplace=True}参数其行为也是新生成一张表再替换原数据，造成非常大的临时占用，运行过程中常出现内存占用超过25G的情况，只能在处理过程中经常将暂时不用的表移除并进行\lstinline{gc}。
+\end{enumerate}
+
+
+\section{下一阶段计划}
+
+\begin{enumerate}
+    \item 继续提升对特征的处理，根据赛事群里的讨论即使不使用user\_app\_usage表也可以达到0.62以上的分数，关键在于 user\_app\_actived 表。因此在特征处理方面还有很多改进空间。
+    \item 在没有对user\_app\_usage进行特征提取的时候即使不进行调参 LightGBM 也已经可以达到0.49的分数，说明目前对user\_app\_usage的处理并没有对成绩带来特别大的贡献。目前对于user\_app\_usage中的use\_date字段是没有进行处理的，接下来准备提取一下用户对应用使用的周期情况等信息。
+    \item 尝试一下除决策树集成外的模型效果，如用户使用的应用类型的词袋特征和用户使用应用的时间序列特征可能可以使用深度学习的方法进行模型构建。
+\end{enumerate}
+
+\end{document}
+\grid
+\grid
