@@ -131,7 +131,7 @@
 \usepackage{indentfirst}
 \usepackage{bm}
 \usepackage[ruled]{algorithm2e}
-
+\usepackage{cite}
 
 % Content start below
 \begin{document}
@@ -325,7 +325,7 @@ for ((i = 1; i<=12;i++)) cargo run --release --bin parallel_performance $i >>../
 其中$y_i$为第$i$个样本的实际观察值，$f_i$为第$i$个样本的模型预测值。$R^2$的取值通常在0与1之间，越接近1代表预测值与真实值匹配程度越高。
 
 
-使用 \lstinline{LightGBM}  构建一个模型运行3折交叉验证进行对比：
+使用 \lstinline{LightGBM} \cite{NIPS2017_6907} 构建一个模型运行3折交叉验证进行对比：
 
 \begin{figure}[H]
     \centering
@@ -439,6 +439,9 @@ for ((i = 1; i<=12;i++)) cargo run --release --bin parallel_performance $i >>../
     \caption{随机森林}
     \label{}
 \end{figure}
+
+\bibliographystyle{unsrt}
+\bibliography{ref}
 
 \end{document}
 \grid
