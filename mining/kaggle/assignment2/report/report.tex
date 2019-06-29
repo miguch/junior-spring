@@ -219,16 +219,89 @@ CART 算法进行决策树构建的方法如下：
 
 由于对于连续变量的特征，$|V|$可能是一个较大的数值，此时对连续变量的每一个不同值进行扫描的计算代价非常大，因此实现中添加了\lstinline{MaxBin}参数，在寻找分裂点时程序将会将特征列分为对应的段数，每段仅测试一个分裂点。将该参数调大可以提升训练结果，但是会增加训练时间。
 
+\section{并行化实现}
+在决策树训练过程中可选的实现并行化的位置为\cite{fang_2015}：
+\begin{enumerate}
+    \item 并行化进行对每一层节点的分裂
+    \item 每个节点的分裂中对每个特征进行并行化处理
+    \item 在每一层中对每个特征进行并行化处理
+\end{enumerate}
+
+在实现的代码中，选择的是在训练一层的过程中对各节点与特征进行并行化处理，每个节点上测试完所有特征的分裂可能后根据评判标准选择最优的分裂点进行分裂。
+
 \section{Gradient Boosting}
 
-使用的损失函数为均方误差：
+Gradient Boosting 是一种结合多个弱学习器的集成方法，每一步中训练的模型尝试去“纠正”先前输出的模型。
+
+设训练集为$\{(x_i, y_i)\}_{i=1}^n$, 模型预测值$\hat{y}=F(x)$, 学习率 $\alpha$，使用的可微分损失函数为均方误差：
 \begin{equation}
     \begin{aligned}
-    L= \frac{1}{N}\sum_{u=1}^{n}(Y_i - \hat{Y_i})\\
+    L(y, \hat{y}) = \frac{1}{N}\sum_{i=1}^{n}(y_i - \hat{y_i})^2\\
     \end{aligned}
 \end{equation}
 
+对损失函数除2后求偏导数得到：
+\begin{equation}
+    \frac{\partial L(y, F(x))}{\partial F(x)}=F(x)-y
+\end{equation}
+
+即模型输出与标签的残差取负数。由梯度下降算法的思想可知延残差方向移动可降低损失函数。由此可得当损失函数为均方误差时 Gradient Boosting 中每步的模型更新方法。
+
+综上，令算法迭代次数为$M$, Gradient Boosting 算法如下：
+
+\begin{algorithm}[H]
+    \SetAlgoLined
+    \KwResult{ 模型 $F_M(x)$ }
+    初始化$F_0(x)=\mathop{\arg\min}_{\gamma} L(y, \gamma)$\;
+    
+
+    \For{$m=1$ to $M$}{
+        \begin{enumerate}
+            \item 计算残差数值：
+            \begin{equation}
+                r_{m}=-\left[\frac{\partial L(y, F_{m-1}(x))}{\partial F_{m-1}(x)}\right] = y-F_{m-1}(x)
+            \end{equation}
+            \item 以 $\{(x, r_{m})\}$ 作为训练集训练一个弱学习模型（此处为决策树）$h_m(x)$
+            \item 更新模型$F_m(x)=F_{m-1}(x)+\alpha h_m(x)$
+        \end{enumerate}
+    }
+    \caption{Gradient Boosting}
+\end{algorithm}
+
+在代码实现中，每次迭代增加了对学习率的从0至1的线性搜索，从而不使用固定的学习率，而是在每一步中找到令当前步最优的学习率：
+\begin{equation}
+    \alpha_m = \mathop{\arg\min}_\alpha L(y, F_{m-1}(x)+\alpha h_m(x))
+\end{equation}
+
+学习率搜索过程可以并行进行，使用这种方法可以在较少迭代次数下较固定学习率获得更好的成绩，在迭代数较大的时候分数可能不如固定较小的学习率。
+
+由以上算法说明可知 Gradient Boosting 整体是串行运行的，因此在 Gradient Boosting 算法中只能对基学习器即决策树的训练部分进行并行的实现。
+
+
 \section{Random Forest}
+
+Random Forest 采用 Bagging 的方法进行决策树集成。Bagging 集成的算法如下：
+
+输入训练集$(X, Y)$，训练轮数$M$，采样大小$n$, 基学习器训练算法$H$
+
+对于训练集有放回采样获得$M$个大小为$n$的训练集$\{(X_i, Y_i)\}_{i=1}^M$
+
+\begin{algorithm}[H]
+    \SetAlgoLined
+    \KwResult{ 模型 $F(x)$ }
+    
+    \For{$m=1$ to $M$}{
+        $h_m = H(X_m, Y_m)$
+    }
+    对于分类问题，采用投票法获得最终模型，对于回归问题，采用取平均方法获得最终模型\;
+    \caption{Bagging}
+\end{algorithm}
+
+随机森林算法则在 Bagging 算法的基础上增加了随机属性选择，即在决策树中的每个节点，先从属性集合中选出一个大小为$k$的子集，再从该子集中选择划分点进行分裂。$k$的取值决定了模型的随机程度。
+
+随机森林中通过加入属性扰动来对只有样本扰动的 Bagging 集成方法进行改进，使得最终集成泛化性因为个体学习器之间的差异性增加而增加。
+
+由随机森林的算法可知，不同的基学习器之间是可以并行进行训练的，但是由于在实现中已经对决策树实现了并行训练，若对基学习器也并行化只会增加上下文切换的开销，因此没有实现基学习器的并行训练。
 
 \section{代码实现}
 
@@ -252,14 +325,14 @@ CART 算法进行决策树构建的方法如下：
 项目中包括的主要代码文件如下
 \begin{enumerate}
     \item[$\bullet$] data\_frame.rs: 使用一个二维的 \lstinline{ndarray} 作为程序使用的 \lstinline{DataFrame} 类型，并定义了类型别名\lstinline{V} 作为全局的数据存储类型，可设为 \lstinline{f64} 或 \lstinline{f32}, 此外还包含了 csv 文件读写等其他实用函数
-    \item[$\bullet$] learner.rs: 定义了一个 \lstinline{Learner} trait，包括了类似于 sklearn 的\lstinline{fit} 和\lstinline{predict} 两个方法，决策树，Boosting和 Random Forest 都需实现该 trait。
+    \item[$\bullet$] learner.rs: 定义了一个学习器 \lstinline{Learner} trait，包括了类似于 sklearn 的\lstinline{fit} 和\lstinline{predict} 两个方法，决策树，Boosting和 Random Forest 都需实现该 trait。
     \item[$\bullet$] tree.rs: 包括了 \lstinline{DecisionTree}类型，实现了 CART 算法，可对单个决策树进行训练和预测。
     \item[$\bullet$] boosting.rs: 包括了\lstinline{GradientBoosting} 类型的定义与训练和预测的实现。
     \item[$\bullet$] random\_forest.rs: 包括了\lstinline{RandomForest} 类型的定义与训练和预测的实现。
     \item[$\bullet$] utils 目录：包括了数个实用功能，如获取数据列排序序列，交叉验证，模型分数计算等。
 \end{enumerate}
 
-bin 目录下的包含 main 函数的代码文件如下：
+bin 目录下的包含 main 函数的可执行代码文件如下：
 \begin{enumerate}
     \item[$\bullet$] boost\_cv.rs：使用 GDBT 进行交叉验证
     \item[$\bullet$] boost\_predict.rs：使用 GDBT 进行训练并输出在测试集上的预测结果
@@ -269,6 +342,8 @@ bin 目录下的包含 main 函数的代码文件如下：
     \item[$\bullet$] rf\_cv.rs：使用随机森林进行交叉验证
     \item[$\bullet$] rf\_predict.rs：使用随机森林进行训练并输出测试集预测结果
 \end{enumerate}
+
+调参的方式为在 bin 目录下的可执行代码文件中找到\lstinline{tree_config} 和 \lstinline{boost_config} 或\lstinline{forest_config} 并修改对应参数字段的数值。
 
 程序运行前需将训练数据放置在项目上层目录下的 data 文件夹下。
 
@@ -292,7 +367,7 @@ for ((i = 1; i<=12;i++)) cargo run --release --bin parallel_performance $i >>../
 将获得的训练速度相对单线程下训练速度的提升数据进行绘图如下：
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.35]{train_time_speedup.png}
+    \includegraphics[scale=0.4]{train_time_speedup.png}
     \caption{并行训练速度提升情况}
     \label{}
 \end{figure}
@@ -300,7 +375,7 @@ for ((i = 1; i<=12;i++)) cargo run --release --bin parallel_performance $i >>../
 预测速度的数据进行绘图如下：
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.35]{test_time_speedup.png}
+    \includegraphics[scale=0.4]{test_time_speedup.png}
     \caption{并行预测速度提升情况}
     \label{}
 \end{figure}
@@ -308,7 +383,7 @@ for ((i = 1; i<=12;i++)) cargo run --release --bin parallel_performance $i >>../
 可见当线程数提升到一定程度下对训练速度的提升大约收敛在 4 倍，而对预测速度的提升不大。
 
 \section{验证}
-以下程序测试均在一台搭载6核12线程 CPU，运行 macOS 系统的笔记本电脑上运行。
+以下程序测试均在一台搭载6核12线程 CPU，运行 macOS 系统的笔记本电脑上运行，数据精度为\lstinline{f64}。
 \\
 
 验证的标准为$R^2$, 其计算方法如下：
@@ -379,7 +454,7 @@ for ((i = 1; i<=12;i++)) cargo run --release --bin parallel_performance $i >>../
     \label{}
 \end{figure}
 
-四个训练中使用取样工具查看内存占用值分别如下：
+四个训练中使用取样工具查看内存占用峰值分别如下：
 \begin{enumerate}
     \item LightGBM: 5.2G
     \begin{figure}[H]
@@ -414,6 +489,7 @@ for ((i = 1; i<=12;i++)) cargo run --release --bin parallel_performance $i >>../
     \end{figure}
 \end{enumerate}
 
+
 \section{Kaggle 分数}
 
 使用单棵决策树训练至10层后提交至 Kaggle 获得的分数为0.16087：
@@ -432,10 +508,10 @@ for ((i = 1; i<=12;i++)) cargo run --release --bin parallel_performance $i >>../
     \label{}
 \end{figure}
 
-使用 Random Forest, 不限制单棵决策树生长，使用决策树总数为350，时的分数为0.17210：
+使用 Random Forest, 限制单棵决策树生长至10层，属性子集大小为3，\lstinline{SubSample}取0.632，分数为0.17433：
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.5]{RF-400-4-005-350.png}
+    \includegraphics[scale=0.5]{best.png}
     \caption{随机森林}
     \label{}
 \end{figure}
